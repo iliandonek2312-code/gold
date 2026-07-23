@@ -101,6 +101,28 @@
     });
   }
 
+  /* ---- Contact form (front-end only demo) ---- */
+  var contactForm = document.getElementById("contactForm");
+  var contactMsg = document.getElementById("contactMsg");
+  if (contactForm && contactMsg) {
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var name = (document.getElementById("name").value || "").trim();
+      var email = (document.getElementById("cemail").value || "").trim();
+      var message = (document.getElementById("message").value || "").trim();
+      var consent = document.getElementById("consent").checked;
+      var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      if (!name || !emailOk || !message || !consent) {
+        contactMsg.textContent = "Merci de remplir tous les champs, une adresse e-mail valide et d'accepter la politique de confidentialité.";
+        contactMsg.className = "form-msg err";
+        return;
+      }
+      contactMsg.textContent = "Merci " + name + " ! Votre message a bien été pris en compte, nous vous répondrons rapidement.";
+      contactMsg.className = "form-msg ok";
+      contactForm.reset();
+    });
+  }
+
   /* ---- Current year in footer ---- */
   var year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
