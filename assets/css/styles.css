@@ -40,6 +40,7 @@ body {
 
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
+h1, h2, h3, h4, p, li, blockquote, summary { overflow-wrap: break-word; }
 
 .container {
   width: 100%;
