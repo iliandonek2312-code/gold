@@ -255,6 +255,9 @@ const FAVICON = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' vi
 const SHELL_CSS = `
 /* ===== Coquille site formation (ajout hors source) ===== */
 body.formation{background:var(--bg);color:var(--ink);margin:0}
+.formation a:focus-visible,.formation button:focus-visible,.formation summary:focus-visible,.formation input:focus-visible,.formation .qz-opts button:focus-visible{outline:3px solid var(--gold-soft);outline-offset:2px;border-radius:6px}
+.formation .skip-to{position:absolute;left:-999px;top:0;z-index:100;background:var(--gold);color:#1a1405;padding:10px 16px;border-radius:0 0 8px 0;font-weight:700}
+.formation .skip-to:focus{left:0}
 .formation .fbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:12px;background:rgba(7,6,4,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:10px 16px}
 .formation .ftoc-btn{font-family:var(--mono);font-size:13px;color:var(--gold);background:transparent;border:1px solid var(--line);border-radius:8px;padding:8px 12px;cursor:pointer;white-space:nowrap}
 .formation .fcrumb{flex:1;min-width:0;font-family:var(--mono);font-size:12.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -360,7 +363,7 @@ function head(title) {
 }
 
 function tocHtml(currentSlug) {
-  let out = `<nav class="ftoc" id="ftoc" aria-label="Sommaire de la formation">
+  let out = `<a class="skip-to" href="#fcontenu">Aller au contenu</a><nav class="ftoc" id="ftoc" aria-label="Sommaire de la formation">
 <div class="ftoc-h">Formation</div>
 <a href="index.html"${currentSlug === "index" ? ' class="cur"' : ""}><span class="n">◆</span> Accueil &amp; progression</a>`;
   let lastPart = null;
@@ -462,7 +465,7 @@ function emit() {
       `\n<body class="formation">\n` +
       tocHtml(meta.slug) +
       bar(crumb, prev, next) +
-      `<main class="fmain">\n${content}\n` +
+      `<main class="fmain" id="fcontenu">\n${content}\n` +
       `<div class="fmod-foot">${doneBtn}${navPair}</div>\n` +
       `<div class="wrap" style="margin-bottom:40px"><button class="fnav-link" data-open-glossaire>📖 Ouvrir le glossaire</button></div>\n` +
       `</main>\n` +
@@ -498,7 +501,7 @@ function emit() {
     `<div class="fscrim" id="fscrim"></div>
 <header class="fbar"><button class="ftoc-btn" aria-expanded="false" aria-controls="ftoc">☰ Sommaire</button><div class="fcrumb"><b>Formation</b> — Gold Sweep Scalper Academy</div><div class="fnav"><a href="01-le-trading-lor-et-toi.html" data-nav-next aria-label="Commencer">▶</a></div></header>
 <div class="fprog"><div id="fprogfill"></div></div>` +
-    `<main class="fmain">
+    `<main class="fmain" id="fcontenu">
 <section class="fhero">
 <div class="eyebrow">Formation complète</div>
 <h1>Le programme, du premier chandelier à l'autonomie</h1>
