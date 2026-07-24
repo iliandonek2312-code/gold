@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 10 · La bibliothèque de setups — Gold Sweep Academy</title>
+<meta name="theme-color" content="#070604">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A5%87%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/formation.css">
+</head>
+<body class="formation">
+<nav class="ftoc" id="ftoc" aria-label="Sommaire de la formation">
+<div class="ftoc-h">Formation</div>
+<a href="index.html"><span class="n">◆</span> Accueil &amp; progression</a><div class="ftoc-h">Partie I — Bases</div><a href="01-le-trading-lor-et-toi.html" class="tocitem" data-mod-slug="01-le-trading-lor-et-toi"><span class="n">01</span> Le trading, l'or et toi</a><a href="02-lire-un-graphique.html" class="tocitem" data-mod-slug="02-lire-un-graphique"><span class="n">02</span> Lire un graphique comme un pro</a><a href="03-bougies-japonaises.html" class="tocitem" data-mod-slug="03-bougies-japonaises"><span class="n">03</span> Bougies japonaises : lire le combat acheteurs / vendeurs</a><div class="ftoc-h">Partie II — Structure & liquidité</div><a href="04-structure-de-marche.html" class="tocitem" data-mod-slug="04-structure-de-marche"><span class="n">04</span> La structure de marché</a><a href="05-la-liquidite.html" class="tocitem" data-mod-slug="05-la-liquidite"><span class="n">05</span> La liquidité</a><a href="06-zones-institutionnelles.html" class="tocitem" data-mod-slug="06-zones-institutionnelles"><span class="n">06</span> Zones institutionnelles : OB, FVG, Premium/Discount</a><a href="07-multi-timeframe.html" class="tocitem" data-mod-slug="07-multi-timeframe"><span class="n">07</span> Analyse multi-timeframe : du Monthly au M1</a><div class="ftoc-h">Partie III — Confluence & exécution</div><a href="08-indicateurs.html" class="tocitem" data-mod-slug="08-indicateurs"><span class="n">08</span> Les indicateurs de confluence</a><a href="09-setup-a-plus.html" class="tocitem" data-mod-slug="09-setup-a-plus"><span class="n">09</span> Le Setup A+ : le modèle d'entrée complet</a><a href="10-bibliotheque-de-setups.html" class="tocitem cur" data-mod-slug="10-bibliotheque-de-setups"><span class="n">10</span> La bibliothèque de setups</a><a href="11-gestion-du-risque.html" class="tocitem" data-mod-slug="11-gestion-du-risque"><span class="n">11</span> Gestion du risque & money management</a><a href="12-sessions-killzones.html" class="tocitem" data-mod-slug="12-sessions-killzones"><span class="n">12</span> Sessions, killzones & routine quotidienne</a><div class="ftoc-h">Partie IV — Rigueur & mental</div><a href="13-journal.html" class="tocitem" data-mod-slug="13-journal"><span class="n">13</span> Journal, erreurs & plan 30 jours</a><a href="14-backtesting.html" class="tocitem" data-mod-slug="14-backtesting"><span class="n">14</span> Backtesting : valider avant de risquer</a><a href="15-psychologie.html" class="tocitem" data-mod-slug="15-psychologie"><span class="n">15</span> Psychologie du scalpeur</a><a href="16-objectifs.html" class="tocitem" data-mod-slug="16-objectifs"><span class="n">16</span> Objectifs réalistes & trajectoire</a><div class="ftoc-h">Partie V — Approfondissements</div><a href="17-tradingview.html" class="tocitem" data-mod-slug="17-tradingview"><span class="n">17</span> La boîte à outils TradingView</a><a href="18-correlations.html" class="tocitem" data-mod-slug="18-correlations"><span class="n">18</span> Les corrélations de l'or</a><a href="19-saisonnalite.html" class="tocitem" data-mod-slug="19-saisonnalite"><span class="n">19</span> Saisonnalité &amp; contexte macro de l'or</a><a href="20-execution.html" class="tocitem" data-mod-slug="20-execution"><span class="n">20</span> Exécution &amp; microstructure</a><a href="21-order-flow.html" class="tocitem" data-mod-slug="21-order-flow"><span class="n">21</span> Lecture du flux : Order Flow, DOM &amp; Footprint</a><a href="22-prop-firm.html" class="tocitem" data-mod-slug="22-prop-firm"><span class="n">22</span> Spécial prop firm : décoder les règles, passer, durer</a><a href="23-etude-de-cas.html" class="tocitem" data-mod-slug="23-etude-de-cas"><span class="n">23</span> Étude de cas : un mois de trading, documenté de A à Z</a><a href="24-trader-durable.html" class="tocitem" data-mod-slug="24-trader-durable"><span class="n">24</span> Le trader durable : hygiène de vie, sécurité &amp; cadre français</a><div class="ftoc-h">Validation</div><a href="examen.html" class="tocitem"><span class="n">25</span> Examen final</a><div class="ftoc-h">Référence</div><a href="glossaire.html" class="tocitem"><span class="n">§</span> Glossaire de l'académie</a></nav><div class="fscrim" id="fscrim"></div>
+<header class="fbar">
+<button class="ftoc-btn" aria-expanded="false" aria-controls="ftoc">☰ Sommaire</button>
+<div class="fcrumb">Formation › Partie III — Confluence & exécution › <b>Module 10</b></div>
+<div class="fnav"><a href="09-setup-a-plus.html" data-nav-prev aria-label="Précédent">◀</a><a href="11-gestion-du-risque.html" data-nav-next aria-label="Suivant">▶</a></div>
+</header>
+<div class="fprog"><div id="fprogfill"></div></div><main class="fmain">
+<div class="wrap">
+<div class="mod-head"><span class="mod-num">10</span><div class="mod-head-txt"><div class="eyebrow">PARTIE III — Module 10 · L'arsenal</div>
+<h2>La bibliothèque de setups</h2>
+<p class="mod-goal"><b>🎯 Objectif du module :</b> disposer de 10 configurations institutionnelles complètes — contexte, conditions, SL/TP, gestion, erreurs — à reconnaître instantanément et à backtester une par une.</p></div></div>
+
+<p class="lead">Le Setup A+ (Module 9) est ton arme principale. Cette bibliothèque en est l'extension : dix déclinaisons de la même logique institutionnelle — le prix collecte de la liquidité, laisse une empreinte, revient la défendre.</p>
+<div class="rule"><div class="t">Comment utiliser la bibliothèque</div><p>Un setup à la fois : choisis-en UN, backteste-le sur 30 occurrences (Module 14), journalise-le sous son nom dans la colonne Notes du journal, et n'ajoute le suivant que quand le premier est maîtrisé. Un trader avec 2 setups prouvés bat un trader avec 10 setups survolés.</p></div>
+
+<h3>Le classement : de A++ à C, la hiérarchie de tes entrées</h3>
+<table>
+<tr><th>Grade</th><th>Composition</th><th>Décision</th></tr>
+<tr><td class="mono">⭐ A++</td><td>Sweep de pool majeur + MSS + OB/FVG + OTE + VWAP + killzone (score 9–10)</td><td>Taille pleine · le trade qu'on attend toute la session</td></tr>
+<tr><td class="mono">A+</td><td>Sweep + MSS + FVG en killzone (score 8)</td><td>Taille pleine · le standard de la formation</td></tr>
+<tr><td class="mono">A</td><td>Sweep + MSS, zone moyenne (score 6–7)</td><td>Demi-taille maximum</td></tr>
+<tr><td class="mono">B</td><td>MSS seul, sans sweep préalable</td><td>Pas de trade — c'est un pullback jusqu'à preuve du contraire</td></tr>
+<tr><td class="mono">C</td><td>Entrée sans sweep ni MSS (« la zone a l'air bien »)</td><td>Interdit. C'est le trade des Échecs 02 et 03</td></tr>
+</table>
+<p>Cette hiérarchie est le prolongement direct du score /10 : elle donne un NOM à chaque niveau pour que ton journal parle clair (« 3 trades A+ cette semaine, zéro C »).</p>
+
+
+<div class="fiche"><div class="fiche-h"><div class="num">SETUP 01 · LE SOCLE</div><h4>GSS Classique — Sweep → MSS → FVG</h4>
+<div class="why">Pourquoi il fonctionne : c'est le cycle institutionnel à l'état pur — collecte de liquidité, retournement signé, re-chargement dans le déséquilibre. Tout le Module 9 lui est consacré : cette fiche n'est qu'un rappel.</div></div>
+<table>
+<tr><td>Contexte idéal</td><td>Killzone · biais M15 aligné H4 · pool majeur identifié à l'avance</td></tr>
+<tr><td>Conditions obligatoires</td><td>Sweep en mèche + réintégration → MSS M1 en clôture avec displacement → FVG net</td></tr>
+<tr><td>SL / TP / RR</td><td>SL derrière la mèche du sweep · TP1 liquidité opposée (RR ≥ 1:2) · TP2 pool suivant</td></tr>
+<tr><td>Gestion active</td><td>50 % à TP1 + breakeven · le reste court vers TP2</td></tr>
+<tr><td>Erreurs & échecs</td><td>Entrer avant le MSS · zone déjà mitigée · setup hors killzone. Échec type : le sweep en cache un second plus profond (l'IDM du Module 5) — d'où le SL derrière TOUTE la mèche.</td></tr>
+</table></div>
+
+<div class="fiche"><div class="fiche-h"><div class="num">SETUP 02 · L'OUVERTURE NEW YORK</div><h4>Judas Swing NY — le faux départ de 14h30</h4>
+<div class="why">Pourquoi il fonctionne : l'open NY injecte un volume énorme ; les algos l'utilisent d'abord pour rafler la liquidité accumulée depuis midi (le « Judas », le mouvement qui trahit), puis lancent la vraie direction du jour — souvent alignée avec le narratif Daily.</div></div>
+<table>
+<tr><td>Contexte idéal</td><td>14h25–15h15 Paris · un range de mi-journée bien dessiné · biais Daily/H4 clair</td></tr>
+<tr><td>Conditions obligatoires</td><td>Le premier élan post-14h30 balaie un extrême du range CONTRE le biais supérieur · réintégration · MSS M1</td></tr>
+<tr><td>Confirmations</td><td>Pic de volume sur le sweep · divergence RSI · FVG de displacement au retour</td></tr>
+<tr><td>SL / TP / RR</td><td>SL derrière l'extrême du Judas · TP1 l'autre extrême du range (≥1:2) · TP2 PDH/PDL dans le sens du biais · RR fréquent 1:3+</td></tr>
+<tr><td>Gestion active</td><td>Le Judas donne souvent le low/high du reste de la journée : après TP1, laisser courir avec un stop suiveur sous les HL M5</td></tr>
+<tr><td>Erreurs & échecs</td><td>Trader le PREMIER élan (être le Judas au lieu de le trader) · entrer sans MSS. Échec type : jour de vraie tendance dès l'open — le « Judas » n'en était pas un et clôture au-delà du range : l'acceptation en clôture M5 est l'invalidation.</td></tr>
+</table></div>
+<div class="fig2">
+<figure id="schema-48">
+<svg viewBox="0 0 330 260">
+  <line x1="110" y1="20" x2="110" y2="240" stroke="#D4AF37" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text class="ann o" x="60" y="16">14h30</text>
+  <rect x="20" y="90" width="90" height="70" rx="5" fill="rgba(162,149,111,.10)" stroke="#4A4028"/>
+  <path class="path-r" d="M110 120 L135 150 L152 195"/>
+  <circle cx="152" cy="190" r="5" fill="none" stroke="#D4AF37" stroke-width="2.5"/>
+  <path class="path-g" d="M152 195 L185 140 L205 155 L245 85 L268 100 L310 45"/>
+  <text class="ann o" x="120" y="222">sweep sous le range</text>
+  <text class="ann g" x="205" y="130" font-weight="600">MSS → long</text>
+  <text class="ann g" x="180" y="250" font-weight="600">✓ GAGNANT : réintégration nette</text>
+</svg>
+<figcaption><b>Schéma 48</b> — Judas gagnant : faux départ, retour, tendance</figcaption>
+</figure>
+<figure id="schema-49">
+<svg viewBox="0 0 330 260">
+  <line x1="110" y1="20" x2="110" y2="240" stroke="#D4AF37" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text class="ann o" x="60" y="16">14h30</text>
+  <rect x="20" y="90" width="90" height="70" rx="5" fill="rgba(162,149,111,.10)" stroke="#4A4028"/>
+  <path class="path-r" d="M110 120 L140 165 L160 150 L185 200 L205 190 L240 235 L275 225 L315 250"/>
+  <circle cx="150" cy="172" r="8" fill="none" stroke="#F06060" stroke-width="2"/>
+  <text class="ann r" x="150" y="120" font-weight="600">✗ PERDANT</text>
+  <text class="ann" x="128" y="140">« réintégration » achetée trop tôt</text>
+  <text class="ann r" x="30" y="252" font-weight="600">clôtures M5 sous le range = tendance réelle, pas Judas</text>
+</svg>
+<figcaption><b>Schéma 49</b> — Judas perdant : raison de l'échec = pas de MSS, le range casse en clôture (jour de tendance)</figcaption>
+</figure>
+</div>
+
+
+<div class="notion"><div class="notion-h"><b>Les variantes du Judas : même piège, cinq contextes</b><span>déclinaisons</span></div><dl>
+<dt>Judas de Londres</dt><dd>09h00–09h15 Paris : le faux départ balaie un côté du range Asie — c'est exactement le Setup 03. Le plus régulier de la semaine.</dd>
+<dt>Judas de New York</dt><dd>14h30–15h00 : la fiche ci-dessus. Souvent plus violent que celui de Londres (volume US), cible fréquente = l'extrême construit depuis midi.</dd>
+<dt>Judas de CPI / PPI (14h30)</dt><dd>La news SORT à l'heure de l'open : premier spike quasi toujours mensonger, amplitude ×2-3. Règle formation : flat pendant la bougie de news, lecture possible seulement après réintégration + MSS, demi-taille.</dd>
+<dt>Judas de NFP (14h30, 1ᵉʳ vendredi)</dt><dd>Le plus brutal du mois : double voire triple sweep courant. Les élèves en validation ne le tradent PAS — on l'étudie en replay.</dd>
+<dt>Pré-FOMC (20h00)</dt><dd>Piège inverse : les heures AVANT la décision fabriquent un faux mouvement d'anticipation (« FOMC drift »). Aucune position ouverte après 19h30 un jour de FOMC, aucune exception.</dd>
+</dl></div>
+
+<div class="fiche"><div class="fiche-h"><div class="num">SETUP 03 · L'OUVERTURE LONDRES</div><h4>London Sweep — le raid du range asiatique</h4>
+<div class="why">Pourquoi il fonctionne : l'Asie construit un range = deux pools parfaitement définis. Londres, première vraie session de volume, ouvre presque chaque jour par la collecte d'un des deux côtés avant l'expansion.</div></div>
+<table>
+<tr><td>Contexte idéal</td><td>09h00–10h30 Paris · range Asie net (≥ 3 $ de hauteur) · biais Daily connu</td></tr>
+<tr><td>Conditions obligatoires</td><td>Sweep du high OU du low Asie contre le biais supérieur · réintégration DANS le range · MSS M1</td></tr>
+<tr><td>Confirmations</td><td>Le côté sweepé coïncide avec un pool supplémentaire (PDL/PDH proche) = double collecte</td></tr>
+<tr><td>SL / TP / RR</td><td>SL derrière la mèche · TP1 le côté opposé du range Asie · TP2 la liquidité H1 suivante · RR typique 1:2 à 1:4</td></tr>
+<tr><td>Gestion active</td><td>Si le prix traverse le range sans hésiter : tout tenir jusqu'à TP2 — les jours « Asie balayée » sont souvent des jours de tendance</td></tr>
+<tr><td>Erreurs & échecs</td><td>Trader un range Asie microscopique (nuit morte) · oublier une news à 09h30/10h00. Échec type : double sweep (les deux côtés pris avant le vrai départ) — après un premier SL, UN seul re-essai autorisé si la séquence complète se re-présente.</td></tr>
+</table></div>
+
+<div class="fiche"><div class="fiche-h"><div class="num">SETUP 04 · LA DOUBLE COLLECTE</div><h4>Inducement → Order Block (IDM + OB)</h4>
+<div class="why">Pourquoi il fonctionne : les institutions nettoient l'appât (les entrées précoces au-dessus de la zone) AVANT de remplir leurs ordres dans l'OB — entrer après l'IDM, c'est entrer après le dernier piège.</div></div>
+<table>
+<tr><td>Contexte idéal</td><td>Zone H1/H4 non mitigée dans le sens du biais · un creux/sommet mineur évident entre le prix et la zone (l'IDM)</td></tr>
+<tr><td>Conditions obligatoires</td><td>① sweep de l'IDM ② livraison du prix dans l'OB ③ réaction : MSS M1 depuis la zone</td></tr>
+<tr><td>Confirmations</td><td>L'OB coïncide avec l'OTE de la jambe · pin bar/engulfing dans la zone</td></tr>
+<tr><td>SL / TP / RR</td><td>SL sous l'OB entier (pas sous l'IDM !) · TP1 le sommet de l'IDM sweepé · TP2 la liquidité externe · RR 1:2,5 typique</td></tr>
+<tr><td>Gestion active</td><td>Entrée limite au raffinement de l'OB (corps de la bougie) · pas de breakeven avant TP1 : la zone peut être re-testée</td></tr>
+<tr><td>Erreurs & échecs</td><td>L'erreur du module Liquidité : acheter l'IDM en le prenant pour la zone. Échec type : l'OB était déjà mitigé en le regardant sur une UT trop petite — toujours vérifier la fraîcheur sur H1.</td></tr>
+</table></div>
+<figure id="schema-50">
+<svg viewBox="0 0 680 280">
+  <rect class="zone-ob" x="60" y="195" width="330" height="45" rx="4"/>
+  <text class="ann g" x="80" y="222">ORDER BLOCK H1 (la vraie zone)</text>
+  <line class="lvl" x1="150" y1="140" x2="420" y2="140"/>
+  <text class="ann o" x="425" y="145">IDM — l'appât</text>
+  <path class="path-r" d="M80 60 L150 110 L190 90 L250 137"/>
+  <circle cx="255" cy="140" r="6" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  <text class="ann o" x="215" y="168">① sweep de l'IDM</text>
+  <path class="path-r" d="M255 142 L300 175 L330 165 L365 210"/>
+  <circle cx="368" cy="212" r="7" fill="none" stroke="#35C79C" stroke-width="2.5"/>
+  <text class="ann g" x="395" y="240" font-weight="600">② livraison dans l'OB → MSS</text>
+  <path class="path-g" d="M370 210 L430 150 L460 168 L520 95 L555 112 L620 45"/>
+  <text class="ann g" x="500" y="70" font-weight="600">③ expansion</text>
+</svg>
+<figcaption><b>Schéma 50</b> — IDM + OB : le sweep de l'appât livre le prix à la zone réelle. Le trade se prend à l'étape ②-③, jamais à l'IDM.</figcaption>
+</figure>
+
+<div class="fiche"><div class="fiche-h"><div class="num">SETUP 05 · LE CHANGEMENT DE CAMP</div><h4>Breaker Block — l'OB retourné</h4>
+<div class="why">Pourquoi il fonctionne : les traders piégés dans l'OB invalidé (<a href="06-zones-institutionnelles.html#schema-35">Schéma 35</a>) sortent à leur breakeven quand le prix revient — leur flux de sortie EST le carburant de la continuation. Les institutions vendent/achètent avec cette vague.</div></div>
+<table>
+<tr><td>Contexte idéal</td><td>Un retournement vient d'avoir lieu (MSS H1/M15) · l'ancien OB du sens précédent a été traversé en clôture</td></tr>
+<tr><td>Conditions obligatoires</td><td>Invalidation EN CLÔTURE de l'OB d'origine · retest du breaker par l'autre côté · rejet (mèche/engulfing)</td></tr>
+<tr><td>Confirmations</td><td>Le breaker chevauche un FVG du displacement (breaker + gap = zone en béton)</td></tr>
+<tr><td>SL / TP / RR</td><td>SL au-delà du breaker · TP la liquidité dans le nouveau sens · RR 1:2 à 1:3</td></tr>
+<tr><td>Gestion active</td><td>Le breaker sert souvent plusieurs fois dans la même journée : après TP, le garder sur la carte</td></tr>
+<tr><td>Erreurs & échecs</td><td>Confondre invalidation en mèche (l'OB tient) et en clôture (breaker). Échec type : breaker contre le biais H4 — un breaker M1 ne renverse pas une tendance H4.</td></tr>
+</table></div>
+
+<div class="fiche"><div class="fiche-h"><div class="num">SETUP 06 · LA CONTINUATION SIGNÉE</div><h4>Inversion FVG (iFVG)</h4>
+<div class="why">Pourquoi il fonctionne : même mécanique de piège que le breaker, appliquée au déséquilibre (<a href="06-zones-institutionnelles.html#schema-37">Schéma 37</a>) — le gap cassé en clôture défend désormais l'autre camp. C'est LE retest de continuation après un MSS.</div></div>
+<table>
+<tr><td>Contexte idéal</td><td>Juste après un MSS avec displacement · le FVG de l'ancien sens vient d'être traversé en clôture</td></tr>
+<tr><td>Conditions obligatoires</td><td>Clôture franche à travers le gap · retour du prix DANS l'ancien gap · rejet</td></tr>
+<tr><td>SL / TP / RR</td><td>SL de l'autre côté de l'iFVG · TP la liquidité du nouveau sens · RR 1:2+ (SL très serré = RR souvent excellent)</td></tr>
+<tr><td>Gestion active</td><td>Entrée limite à 50 % de l'iFVG · setup rapide : si pas servi en ~15 bougies M1, annuler</td></tr>
+<tr><td>Erreurs & échecs</td><td>Trader l'inversion d'un FVG de dérive (sans displacement d'origine) : seuls les gaps « nobles » s'inversent proprement. Échec type : double inversion sur nouvelle news — flat 15 min autour des annonces, toujours.</td></tr>
+</table></div>
+
+<div class="fiche"><div class="fiche-h"><div class="num">SETUP 07 · LA PRÉCISION CHIRURGICALE</div><h4>BPR — Balanced Price Range</h4>
+<div class="why">Pourquoi il fonctionne : la zone a été équilibrée par deux displacements opposés — les deux camps y ont des ordres. Son retest est défendu au tick près, ce qui autorise le SL le plus serré de toute la bibliothèque.</div></div>
+<table>
+<tr><td>Contexte idéal</td><td>Après un aller-retour violent (Judas, news digérée) · deux vrais FVG opposés qui se chevauchent</td></tr>
+<tr><td>Conditions obligatoires</td><td>Intersection nette des deux gaps · retest dans le sens du displacement le PLUS RÉCENT · biais aligné</td></tr>
+<tr><td>SL / TP / RR</td><td>SL derrière le BPR (quelques ticks) · TP liquidité externe · RR fréquemment 1:3 à 1:5 grâce au SL minuscule</td></tr>
+<tr><td>Gestion active</td><td>SL serré = plus de faux départs : taille réduite de 25 % et acceptation d'un winrate plus bas contre un RR plus haut</td></tr>
+<tr><td>Erreurs & échecs</td><td>Bricoler un BPR avec des chevauchements approximatifs. Échec type : BPR re-traversé en clôture = il s'inverse à son tour, on ne s'obstine pas.</td></tr>
+</table></div>
+<figure id="schema-51">
+<svg viewBox="0 0 680 280">
+  <path class="path-g" d="M60 230 L130 90"/>
+  <path class="path-r" d="M130 90 L200 235"/>
+  <rect class="zone-fvg" x="55" y="130" width="290" height="42" rx="4"/>
+  <rect x="55" y="150" width="290" height="45" rx="4" fill="rgba(240,96,96,.12)" stroke="rgba(240,96,96,.5)" stroke-width="1.5"/>
+  <rect x="55" y="150" width="290" height="22" rx="3" fill="rgba(212,175,55,.30)" stroke="#D4AF37" stroke-width="2"/>
+  <text class="ann o" x="355" y="166" font-weight="600">BPR = intersection des 2 gaps</text>
+  <text class="ann g" x="70" y="120">FVG haussier ↑</text>
+  <text class="ann r" x="210" y="215">FVG baissier ↓</text>
+  <path class="path-r" d="M200 235 L260 195 L295 175 L330 163"/>
+  <circle cx="333" cy="161" r="7" fill="none" stroke="#F06060" stroke-width="2.5"/>
+  <path class="path-r" d="M336 163 L400 225 L440 208 L510 262"/>
+  <text class="ann r" x="420" y="120" font-weight="600">retest du BPR = entrée (sens du displacement récent)</text>
+  <path class="arrow" d="M430 128 Q 380 140 345 155"/>
+</svg>
+<figcaption><b>Schéma 51</b> — Le BPR : deux déséquilibres opposés qui se chevauchent. La bande d'intersection est la zone la plus précise du répertoire SMC.</figcaption>
+</figure>
+
+<div class="fiche"><div class="fiche-h"><div class="num">SETUP 08 · LE JOUR DE TENDANCE</div><h4>Continuation Pullback — le FVG dans le sens du courant</h4>
+<div class="why">Pourquoi il fonctionne : en jour de tendance, les institutions rechargent à chaque repli dans les gaps qu'elles viennent de créer. Pas de retournement à deviner : on monte dans le train à chaque arrêt.</div></div>
+<table>
+<tr><td>Contexte idéal</td><td>Biais H4 + M15 + Daily tous alignés · BOS en série · prix qui respecte les EMA M5</td></tr>
+<tr><td>Conditions obligatoires</td><td>Un BOS vient d'être imprimé · pullback vers le FVG/OB créé par la jambe de cassure · en discount de la MICRO-jambe</td></tr>
+<tr><td>Confirmations</td><td>Le pullback sweep un mini-pool interne (les stops des retardataires) avant de toucher la zone</td></tr>
+<tr><td>SL / TP / RR</td><td>SL sous la zone + le dernier HL · TP l'extension vers la liquidité externe suivante · RR 1:2 conservateur</td></tr>
+<tr><td>Gestion active</td><td>En jour de tendance, jusqu'à 2-3 continuations dans la session — mais le risque TOTAL du jour reste plafonné (Module 11)</td></tr>
+<tr><td>Erreurs & échecs</td><td>Continuer à acheter les pullbacks après un MSS M15 (le train est arrivé). Échec type : la « continuation » de fin de session (après 17h) qui meurt dans le volume décroissant.</td></tr>
+</table></div>
+
+<div class="fiche"><div class="fiche-h"><div class="num">SETUP 09 · LE RAID JOURNALIER</div><h4>PDH / PDL Raid — le retournement sur l'extrême de la veille</h4>
+<div class="why">Pourquoi il fonctionne : le high/low de la veille est le pool le plus universellement visible — chaque terminal du monde l'affiche. Son raid déclenche un maximum de stops d'un coup : le carburant idéal pour un retournement de session.</div></div>
+<table>
+<tr><td>Contexte idéal</td><td>Le prix ouvre la killzone proche du PDH/PDL · le raid irait CONTRE la vraie direction (biais Daily opposé)</td></tr>
+<tr><td>Conditions obligatoires</td><td>Mèche au-delà du PDH/PDL · réintégration · MSS M1 avec displacement</td></tr>
+<tr><td>Confirmations</td><td>Confluence du niveau : PDH + EQH, ou PDL + fib OTE d'une jambe H4 = raid premium</td></tr>
+<tr><td>SL / TP / RR</td><td>SL derrière l'extrême du raid · TP1 l'équilibre du range de la veille · TP2 l'extrême opposé (PDL↔PDH) · RR jusqu'à 1:4 les bons jours</td></tr>
+<tr><td>Gestion active</td><td>Le raid réussi marque souvent LE point extrême du jour : le runner peut viser loin, stop suiveur structure M5</td></tr>
+<tr><td>Erreurs & échecs</td><td>Trader le raid DANS le sens d'un breakout Daily légitime (quand le Daily casse pour de vrai, le PDH n'est qu'une étape). Échec type : acceptation au-delà du niveau en clôtures M15 = breakout, pas raid.</td></tr>
+</table></div>
+
+<div class="fiche"><div class="fiche-h"><div class="num">SETUP 10 · LA FENÊTRE HORAIRE</div><h4>Silver Bullet — la fenêtre 16h00–17h00 Paris</h4>
+<div class="why">Pourquoi il fonctionne : concept horaire d'ICT — une heure après l'open NY, le Judas est digéré, la direction du jour est choisie, et les algos exécutent la jambe la plus propre de l'après-midi. On ne cherche qu'UNE chose dans la fenêtre : le premier FVG dans le sens confirmé.</div></div>
+<table>
+<tr><td>Contexte idéal</td><td>16h00–17h00 Paris · la direction post-open NY est claire (MSS de 14h30-15h30 digéré)</td></tr>
+<tr><td>Conditions obligatoires</td><td>Un FVG M1/M5 se forme DANS la fenêtre, dans le sens du mouvement dominant de la session NY</td></tr>
+<tr><td>Confirmations</td><td>Le FVG s'appuie sur un niveau (iFVG, breaker, équilibre) · volume soutenu</td></tr>
+<tr><td>SL / TP / RR</td><td>SL derrière le swing qui a créé le FVG · TP la liquidité de fin de journée (souvent PDH/PDL ou extrême de session) · RR cible 1:2</td></tr>
+<tr><td>Gestion active</td><td>Un seul trade dans la fenêtre · sortie complète avant 17h30 (le volume meurt)</td></tr>
+<tr><td>Erreurs & échecs</td><td>Forcer un trade parce que « c'est l'heure » : la fenêtre est une condition nécessaire, pas suffisante. Échec type : jour sans direction (NY en range) — la Silver Bullet ne se trade pas les jours indécis.</td></tr>
+</table></div>
+<figure id="schema-52">
+<svg viewBox="0 0 680 260">
+  <rect x="300" y="20" width="180" height="220" rx="8" fill="rgba(212,175,55,.08)" stroke="#D4AF37" stroke-width="1.5" stroke-dasharray="8 6"/>
+  <text class="ann o" x="330" y="42" font-weight="600">16h00 → 17h00</text>
+  <path class="path-r" d="M60 80 L110 130 L140 115 L180 160"/>
+  <path class="path-g" d="M180 160 L240 95 L270 115 L330 55 L355 90 L375 78 L410 110"/>
+  <rect class="zone-fvg" x="345" y="88" width="120" height="26" rx="3"/>
+  <circle cx="412" cy="108" r="7" fill="none" stroke="#35C79C" stroke-width="2.5"/>
+  <path class="path-g" d="M415 106 L470 60 L500 78 L545 35 L570 50 L620 20"/>
+  <text class="ann" x="60" y="230">Judas + MSS avant 16h = direction connue</text>
+  <text class="ann g" x="380" y="150" font-weight="600">1er FVG DANS la fenêtre</text>
+  <text class="ann g" x="380" y="170">= l'entrée Silver Bullet</text>
+</svg>
+<figcaption><b>Schéma 52</b> — Silver Bullet : on n'anticipe rien, on laisse la session choisir sa direction, puis on prend le premier déséquilibre propre de la fenêtre 16h–17h.</figcaption>
+</figure>
+
+
+<h3>Les modèles ICT nommés : le décodeur</h3>
+<p>Sur YouTube et Twitter, tu croiseras des noms de « modèles » ICT qui semblent mystérieux. Bonne nouvelle : tu les connais déjà TOUS — ce sont des assemblages de tes briques. Voici le décodeur :</p>
+<table>
+<tr><th>Nom du modèle</th><th>Traduction dans TA formation</th></tr>
+<tr><td class="mono">Power of Three (PO3 / AMD)</td><td>Accumulation → Manipulation → Distribution : le cycle du Module 5.7 appliqué à la bougie journalière — l'open accumule, le Judas manipule, la tendance distribue (schéma ci-dessous)</td></tr>
+<tr><td class="mono">2022 Model</td><td>Sweep d'un extrême → MSS → entrée au premier FVG du retour : c'est ton Setup 01 GSS Classique, au mot près</td></tr>
+<tr><td class="mono">Silver Bullet</td><td>Ta fiche Setup 10 : le premier FVG de la fenêtre horaire post-open</td></tr>
+<tr><td class="mono">Unicorn</td><td>Breaker + FVG qui se chevauchent : la confluence des Setups 05 et 06 — traite-la comme un BPR de rang 1</td></tr>
+<tr><td class="mono">Breaker Model</td><td>Ta fiche Setup 05</td></tr>
+<tr><td class="mono">Model / entrées « Venom » et autres noms exotiques</td><td>Variations marketing des mêmes séquences sweep → shift → array. Nouveau nom ≠ nouveau concept : décompose toujours en briques (quel pool ? quel shift ? quel PD Array ?)</td></tr>
+</table>
+<figure id="schema-53">
+<svg viewBox="0 0 680 300">
+  <line x1="60" y1="255" x2="640" y2="255" stroke="#2E2614"/>
+  <rect x="60" y="120" width="170" height="90" rx="6" fill="rgba(162,149,111,.10)" stroke="#4A4028"/>
+  <text class="ann" x="88" y="108" fill="#FFFFFF" font-weight="600">① ACCUMULATION</text>
+  <text class="ann" x="80" y="170">range de l'open (Asie)</text>
+  <path class="path-r" d="M230 165 L268 195 L255 185 L295 230"/>
+  <circle cx="297" cy="228" r="8" fill="none" stroke="#D4AF37" stroke-width="2.5"/>
+  <text class="ann o" x="240" y="260" font-weight="600">② MANIPULATION</text>
+  <text class="ann o" x="248" y="278">(le Judas sous le range)</text>
+  <path class="path-g" d="M300 228 L360 160 L390 178 L450 100 L485 118 L560 45 L590 60 L635 25"/>
+  <text class="ann g" x="440" y="150" font-weight="600">③ DISTRIBUTION</text>
+  <text class="ann g" x="440" y="170">l'expansion vers le DOL</text>
+  <line class="liq" x1="500" y1="30" x2="655" y2="30"/>
+  <text class="ann o" x="540" y="22">Draw on Liquidity</text>
+  <text class="ann" x="60" y="30" fill="#FFFFFF" font-weight="600">POWER OF THREE — la journée en trois actes (l'open est souvent proche du low du jour en journée haussière)</text>
+</svg>
+<figcaption><b>Schéma 53</b> — Power of Three (AMD) : l'open accumule, la manipulation balaie le mauvais côté, la distribution déroule vers l'aimant. Ton Setup A+ consiste à entrer exactement à la charnière ②→③.</figcaption>
+</figure>
+
+<div class="ex"><div class="t">Exemple chiffré — choisir le bon setup au bon moment</div>
+<p>Lundi 09h03 : sweep du low Asie → <b>Setup 03</b> (London Sweep), +2,1R. Mardi 14h42 : l'or a monté toute la matinée, New York plonge sous le low de midi puis réintègre → <b>Setup 02</b> (Judas NY), +1,8R. Jeudi 16h10 : tendance haussière confirmée, premier FVG propre de la fenêtre → <b>Setup 10</b> (Silver Bullet), −1R (bon trade perdant : plan suivi). Trois jours, trois setups DIFFÉRENTS — mais un seul cerveau : à chaque fois la même séquence pool → sweep → confirmation → zone. La bibliothèque ne sert pas à trader plus ; elle sert à nommer précisément ce que le marché offre, et à refuser tout ce qui n'a pas de nom.</p></div>
+<h3>10.1 — Galerie des échecs : 4 pièges à reconnaître</h3>
+<p class="lead">Reconnaître un bon setup, c'est la moitié du métier. Reconnaître un <em>faux</em> setup — celui qui coche presque toutes les cases mais va perdre — c'est l'autre moitié, et c'est ce qui sépare l'élève rentable des autres. Voici les quatre échecs qui reviennent le plus souvent, chacun disséqué.</p>
+
+<div class="fiche"><div class="fiche-h"><div class="num">ÉCHEC 01</div><h4>Le setup « propre » qui va contre la structure supérieure</h4>
+<div class="why">Le piège le plus fréquent chez l'élève qui vient de comprendre le M1 : tout est parfait en bas… et faux en haut.</div></div>
+<figure id="schema-54">
+<svg viewBox="0 0 680 300">
+  <text class="ann" x="55" y="24" fill="#FFFFFF" font-weight="600">H4 : tendance BAISSIÈRE (le prix descend en escalier)</text>
+  <path class="path-r" d="M50 60 L120 110 L100 90 L175 150 L150 130 L230 195 L210 175 L285 235"/>
+  <text class="ann r" x="70" y="52">HH</text><text class="ann r" x="150" y="118">LH</text><text class="ann r" x="235" y="165">LH</text>
+  <line x1="310" y1="20" x2="310" y2="285" stroke="#2E2614"/>
+  <text class="ann" x="345" y="24" fill="#FFFFFF" font-weight="600">M1 (zoom) : joli sweep + MSS haussier</text>
+  <line class="liq" x1="360" y1="230" x2="520" y2="230"/>
+  <path class="path-r" d="M355 170 L400 210 L430 245"/>
+  <circle cx="432" cy="243" r="6" fill="none" stroke="#D4AF37" stroke-width="2.5"/>
+  <path class="path-g" d="M435 244 L480 190 L510 205 L560 150"/>
+  <circle cx="512" cy="203" r="7" fill="none" stroke="#35C79C" stroke-width="2"/>
+  <text class="ann g" x="470" y="180">MSS ✓</text>
+  <path class="path-r" d="M562 150 L600 210 L630 195 L660 255"/>
+  <text class="ann r" x="560" y="285" font-weight="600">le H4 reprend la main → SL</text>
+</svg>
+<figcaption><b>Schéma 54</b> — Le long M1 est techniquement valide, mais il rame à contre-courant d'un H4 clairement baissier : la petite UT a raison deux minutes, la grande UT a raison pour la journée.</figcaption>
+</figure>
+<div class="notion"><div class="notion-h"><b>Autopsie de l'échec 01</b><span>contre-tendance</span></div><dl>
+<dt>Contexte de marché</dt><dd>H4 en tendance baissière franche (LH/LL en série), prix en premium d'une jambe H4 descendante.</dd>
+<dt>Raisonnement d'entrée</dt><dd>« Sweep d'un low M1 + MSS haussier avec displacement + FVG : c'est un Setup A+, je suis long. » Le score M1 isolé sortait à 7-8/10.</dd>
+<dt>Invalidation ignorée</dt><dd>Le point #1 de la checklist — biais M15/H4 aligné. Ici le biais supérieur était baissier : le point manquait, mais l'élève l'a « arrondi » parce que le reste était beau.</dd>
+<dt>Raison exacte de l'échec</dt><dd>Le MSS M1 n'était que le rebond correctif d'une tendance baissière. Les institutions ont laissé le M1 respirer avant de reprendre leur distribution — le long est mort au premier LH H4.</dd>
+<dt>Leçon à retenir</dt><dd>Un setup parfait dans la mauvaise direction reste un mauvais setup. La cascade multi-timeframe (Module 7) passe AVANT la beauté du M1. Pas d'alignement supérieur = pas de trade, point final.</dd>
+</dl></div></div>
+
+<div class="fiche"><div class="fiche-h"><div class="num">ÉCHEC 02</div><h4>L'entrée avant la confirmation de liquidité</h4>
+<div class="why">L'impatience déguisée en anticipation : entrer sur le sweep au lieu d'attendre le retournement signé.</div></div>
+<figure id="schema-55">
+<svg viewBox="0 0 680 300">
+  <line class="liq" x1="60" y1="210" x2="420" y2="210"/>
+  <text class="ann o" x="62" y="202">equal lows (la cible)</text>
+  <path class="path-r" d="M70 90 L140 140 L120 120 L200 175 L180 155 L260 215"/>
+  <text class="ann r" x="215" y="245" font-weight="600">entrée ICI, sur la mèche</text>
+  <circle cx="262" cy="215" r="8" fill="none" stroke="#F06060" stroke-width="2.5"/>
+  <path class="arrow" d="M300 250 Q 280 235 268 222"/>
+  <path class="path-r" d="M262 215 L300 250 L330 240 L370 275"/>
+  <text class="ann r" x="360" y="255" font-weight="600">le sweep continue → SL immédiat</text>
+  <text class="ann" x="430" y="120" fill="#FFFFFF">Ce qu'il fallait attendre :</text>
+  <text class="ann g" x="430" y="145">la clôture de réintégration</text>
+  <text class="ann g" x="430" y="167">PUIS le CHoCH M1 (le « oui »)</text>
+  <path class="path-g" d="M430 200 L470 230 L500 215 L540 185" opacity="0.5"/>
+</svg>
+<figcaption><b>Schéma 55</b> — Entrer pendant que le prix balaie encore, c'est parier que la mèche s'arrête là. Le marché n'a rien confirmé : la liquidité peut être plus profonde qu'elle n'en a l'air.</figcaption>
+</figure>
+<div class="notion"><div class="notion-h"><b>Autopsie de l'échec 02</b><span>anticipation</span></div><dl>
+<dt>Contexte de marché</dt><dd>Le prix descend vers un pool d'equal lows évident, en killzone, biais aligné. Le décor du setup est parfait.</dd>
+<dt>Raisonnement d'entrée</dt><dd>« La mèche perce les equal lows, c'est LE sweep, j'achète tout de suite pour avoir le meilleur prix avant que ça reparte. »</dd>
+<dt>Invalidation ignorée</dt><dd>Le point #5 — le CHoCH avec displacement. Aucune réintégration, aucun MSS : il n'y avait aucune preuve que le mouvement baissier était terminé.</dd>
+<dt>Raison exacte de l'échec</dt><dd>Ce n'était pas un sweep mais le début d'une expansion baissière : le pool contenait moins de liquidité que prévu et le prix a continué. Entré sans confirmation, l'élève a été balayé avec les stops qu'il croyait chasser.</dd>
+<dt>Leçon à retenir</dt><dd>Le sweep n'est pas le signal — c'est l'invitation. Le signal, c'est la réintégration + le MSS. On perd toujours quelques ticks à attendre la confirmation : c'est le prix de ne pas être soi-même la liquidité.</dd>
+</dl></div></div>
+
+<div class="fiche"><div class="fiche-h"><div class="num">ÉCHEC 03</div><h4>La réaction insuffisante sur la zone</h4>
+<div class="why">La zone est touchée, une petite bougie verte apparaît… et l'élève prend ça pour un feu vert. La zone était déjà vide.</div></div>
+<figure id="schema-56">
+<svg viewBox="0 0 680 300">
+  <rect class="zone-ob" x="60" y="150" width="560" height="46" rx="4"/>
+  <text class="ann g" x="80" y="178">Order Block (déjà mitigé 2 fois)</text>
+  <path class="path-r" d="M70 70 L130 120 L110 100 L180 155"/>
+  <path class="path-g" d="M180 155 L210 135 L195 148 L235 130"/>
+  <text class="ann o" x="180" y="118">réaction molle (petites bougies)</text>
+  <path class="path-r" d="M235 130 L280 175 L265 160 L320 210 L305 195 L370 250"/>
+  <text class="ann r" x="330" y="235" font-weight="600">la zone cède → SL</text>
+  <text class="ann" x="430" y="90" fill="#FFFFFF">Une VRAIE réaction :</text>
+  <path class="path-g" d="M430 160 L470 100 L500 120 L560 60" opacity="0.55"/>
+  <text class="ann g" x="470" y="150">rejet net + displacement</text>
+</svg>
+<figcaption><b>Schéma 56</b> — Une zone qui repousse le prix mollement (petites bougies indécises, pas de displacement) est une zone qui n'a plus d'ordres institutionnels dedans. L'absence de réaction franche EST le signal — de ne PAS entrer.</figcaption>
+</figure>
+<div class="notion"><div class="notion-h"><b>Autopsie de l'échec 03</b><span>zone vide</span></div><dl>
+<dt>Contexte de marché</dt><dd>Un Order Block bien identifié, mais déjà retesté deux fois auparavant (mitigation avancée, Module 6).</dd>
+<dt>Raisonnement d'entrée</dt><dd>« Le prix touche mon OB et rebondit un peu : la demande est là, j'entre long au retest. »</dd>
+<dt>Invalidation ignorée</dt><dd>La qualité de la réaction ET la fraîcheur de la zone. Un rebond mou sans displacement n'est pas une défense institutionnelle ; et une zone déjà servie deux fois est probablement vide.</dd>
+<dt>Raison exacte de l'échec</dt><dd>Les ordres qui dormaient dans l'OB avaient été consommés aux passages précédents. La petite réaction verte n'était que du bruit de retail, pas de la vraie demande — la zone a cédé au coup suivant.</dd>
+<dt>Leçon à retenir</dt><dd>On ne trade pas une zone parce qu'elle existe, mais parce qu'elle RÉAGIT — franchement, au premier contact, avec displacement. Pas de réaction violente = pas d'ordres = pas d'entrée. Privilégie toujours les zones fraîches (Module 6).</dd>
+</dl></div></div>
+
+<div class="fiche"><div class="fiche-h"><div class="num">ÉCHEC 04</div><h4>Le faux signal : le CHoCH-piège suivi du retournement immédiat</h4>
+<div class="why">Un MSS apparaît, l'élève entre… et la bougie suivante l'efface. Le « retournement » était lui-même la liquidité.</div></div>
+<figure id="schema-57">
+<svg viewBox="0 0 680 300">
+  <path class="path-g" d="M60 220 L130 150 L110 170 L190 100"/>
+  <line class="lvl" x1="150" y1="150" x2="360" y2="150"/>
+  <text class="ann o" x="365" y="155">dernier HL (le « CHoCH » à casser)</text>
+  <path class="path-r" d="M190 100 L240 155 L225 140 L275 175"/>
+  <circle cx="275" cy="172" r="7" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  <text class="ann r" x="215" y="200" font-weight="600">« CHoCH baissier ! » → entrée short</text>
+  <path class="path-g" d="M275 172 L310 120 L295 135 L340 80 L360 95 L410 40"/>
+  <circle cx="312" cy="118" r="8" fill="none" stroke="#F06060" stroke-width="2.5"/>
+  <text class="ann r" x="300" y="255" font-weight="600">clôture repart à la hausse → SL immédiat</text>
+  <text class="ann g" x="360" y="30">la vraie tendance continue</text>
+</svg>
+<figcaption><b>Schéma 57</b> — La cassure du HL n'était qu'une mèche de collecte : la bougie referme au-dessus du niveau. Ce n'était pas un changement de caractère, c'était un stop hunt sur les acheteurs, déguisé en CHoCH.</figcaption>
+</figure>
+<div class="notion"><div class="notion-h"><b>Autopsie de l'échec 04</b><span>CHoCH-piège</span></div><dl>
+<dt>Contexte de marché</dt><dd>Tendance haussière propre. Le prix perce brièvement le dernier higher low.</dd>
+<dt>Raisonnement d'entrée</dt><dd>« Le HL est cassé, c'est un CHoCH baissier, la tendance se retourne, je vends. »</dd>
+<dt>Invalidation ignorée</dt><dd>La distinction mèche vs clôture (Module 4). Un CHoCH se valide en CLÔTURE au-delà du niveau — ici la bougie a percé en mèche puis refermé du bon côté : rien n'a changé.</dd>
+<dt>Raison exacte de l'échec</dt><dd>La cassure du HL était une prise de liquidité (les stops des acheteurs sous le HL), pas un vrai changement de structure. Sans displacement ni clôture, ce n'était pas un MSS — juste l'appât avant la continuation haussière.</dd>
+<dt>Leçon à retenir</dt><dd>Un CHoCH en mèche n'existe pas : exige la clôture ET le displacement (le MSS du Module 4). Le marché fabrique des faux CHoCH précisément pour piéger ceux qui vendent le premier signe de faiblesse. Attends la preuve, pas la promesse.</dd>
+</dl></div></div>
+
+<div class="rule"><div class="t">Le fil rouge des 4 échecs</div><p>Regarde bien : les quatre pièges viennent tous du même réflexe — <b>traiter un indice comme une preuve</b>. Un beau M1 traité comme un feu vert (01), un sweep traité comme un retournement (02), un contact traité comme une réaction (03), une mèche traitée comme une cassure (04). La discipline, c'est exiger la confirmation complète à chaque fois, même quand tout « sent » bon. Le marché paie la patience et taxe l'anticipation.</p></div>
+
+<h3>10.2 — Exercices : reconnaître le bon setup</h3>
+<div class="exo"><div class="t">Exercice 1</div>
+<p>09h06 : mèche M1 sous le low Asie ET sous le PDL (les deux niveaux à 40 ticks l'un de l'autre), réintégration, puis MSS haussier avec displacement. Biais Daily haussier. Quel(s) setup(s) de la bibliothèque reconnais-tu, et pourquoi c'est mieux qu'un seul ?</p>
+<details><summary>Voir la réponse détaillée</summary><div>C'est la superposition <b>Setup 03 (London Sweep)</b> + <b>Setup 09 (PDL Raid)</b> — le sweep a récolté DEUX pools majeurs d'un coup (low Asie + PDL) : double collecte = double carburant. La checklist gagne le point #4 avec mention. Exécution : celle du GSS Classique (Setup 01) puisque la séquence sweep→MSS→FVG est complète ; le TP2 peut viser plus loin que d'habitude (le PDH), car un double raid réussi marque très souvent le low du jour.</div></details></div>
+<div class="exo"><div class="t">Exercice 2</div>
+<p>15h50 : le Judas de 14h35 a sweepé le haut du range, MSS baissier confirmé à 14h50, le prix a déjà baissé de 5 $. À 16h12, un pullback imprime un FVG baissier M1 qui chevauche un ancien FVG haussier cassé en clôture. Monte le trade complet avec son nom.</p>
+<details><summary>Voir la réponse détaillée</summary><div>C'est la <b>Silver Bullet (Setup 10)</b> dans sa version la plus propre, renforcée par une <b>iFVG (Setup 06)</b> : la fenêtre 16h–17h est ouverte, la direction du jour est baissière (Judas + MSS digérés), et le premier FVG de la fenêtre s'appuie sur un gap inversé — double zone. Trade : entrée limite à 50 % du FVG baissier · SL au-dessus de l'iFVG (le swing du pullback) · TP1 le low de 15h45 · TP2 le PDL · sortie totale avant 17h30. Score checklist attendu : 9–10/10.</div></details></div>
+
+<div class="plan"><div class="t">Plan d'action — Module 10</div>
+<ol>
+<li><b>Choisis TON deuxième setup</b> (après le GSS Classique) selon ton créneau : matin → London Sweep ; après-midi → Judas puis Silver Bullet.</li>
+<li><b>Backteste-le isolément :</b> 30 occurrences minimum au protocole du Module 14, journalisées sous son nom.</li>
+<li><b>Construis ta fiche personnelle :</b> recopie la fiche du setup et annote-la avec TES stats (winrate, RR moyen, meilleure heure).</li>
+<li><b>Critère de passage :</b> 2 setups avec espérance positive prouvée avant d'en ouvrir un 3ᵉ. La bibliothèque est un garde-manger, pas un buffet.</li>
+</ol></div>
+<div class="ex"><div class="t">Exemple illustré — refuser 4 setups pour en prendre 1</div>
+<p>Mardi, journal du soir : 09h02 breakout sans sweep → refusé (grade C). 09h44 OB retesté 3ᵉ fois → refusé (zone morte). 14h33 spike de news ADP → refusé (protocole 12.7). 15h07 pullback sans MSS → refusé (grade B). 16h12 Silver Bullet complet, FVG net dans le sens confirmé → PRIS, +1,9R. Bilan : 5 occasions, 4 refus nommés, 1 exécution. La bibliothèque n'a pas servi à trader plus — elle a donné un NOM et un motif de refus à chaque piège. Un setup sans nom est un trade interdit : c'est la règle qui protège tout le reste.</p></div>
+</div>
+<div class="fmod-foot"><button class="done-btn" data-slug="10-bibliotheque-de-setups" aria-pressed="false">○ MARQUER CE MODULE COMME TERMINÉ</button><div class="fnav-pair"><a class="fnav-link prev" data-nav-prev href="09-setup-a-plus.html">◀ Module 09</a><a class="fnav-link next" data-nav-next href="11-gestion-du-risque.html">Module 11 ▶</a></div></div>
+<div class="wrap" style="margin-bottom:40px"><button class="fnav-link" data-open-glossaire>📖 Ouvrir le glossaire</button></div>
+</main>
+<dialog id="glossaire-dlg">
+<div class="gdlg-head"><h2>Glossaire — 52 termes</h2><button data-close-glossaire>Fermer ✕</button></div>
+<div class="gdlg-body"><table>
+<tr><th>Terme</th><th>Définition</th></tr>
+<tr><td class="mono">BOS</td><td>Break of Structure — cassure en clôture dans le sens de la tendance (continuation)</td></tr>
+<tr><td class="mono">CHoCH</td><td>Change of Character — première cassure en clôture contre la tendance (retournement) ; notre déclencheur</td></tr>
+<tr><td class="mono">HH / HL / LH / LL</td><td>Higher High / Higher Low / Lower High / Lower Low — les swings qui définissent la tendance</td></tr>
+<tr><td class="mono">Liquidité</td><td>Concentration de stops et d'ordres en attente ; le carburant que le prix va chercher</td></tr>
+<tr><td class="mono">BSL / SSL</td><td>Buy-side (au-dessus des sommets) / Sell-side liquidity (sous les creux)</td></tr>
+<tr><td class="mono">EQH / EQL</td><td>Equal Highs / Equal Lows — sommets ou creux égaux où les stops s'empilent</td></tr>
+<tr><td class="mono">PDH / PDL</td><td>Previous Day High / Low — extrêmes de la veille, pools majeurs</td></tr>
+<tr><td class="mono">Sweep / Stop hunt</td><td>Dépassement d'un pool en mèche suivi d'une réintégration : les stops sont consommés</td></tr>
+<tr><td class="mono">Displacement</td><td>Bougie impulsive et volumineuse qui casse la structure et laisse un FVG</td></tr>
+<tr><td class="mono">FVG</td><td>Fair Value Gap — déséquilibre sur 3 bougies (gap entre mèches 1 et 3) qui attire le prix</td></tr>
+<tr><td class="mono">Order Block (OB)</td><td>Dernière bougie contraire avant le displacement ; empreinte des ordres institutionnels</td></tr>
+<tr><td class="mono">Mitigated</td><td>Se dit d'une zone (OB/FVG) déjà retestée — elle a livré sa liquidité, on ne la trade plus</td></tr>
+<tr><td class="mono">Premium / Discount</td><td>Moitié haute (chère) / basse (bon marché) d'une jambe de prix, séparées par le 50 %</td></tr>
+<tr><td class="mono">OTE</td><td>Optimal Trade Entry — la fenêtre 0.62–0.79 du Fibonacci, entrée idéale</td></tr>
+<tr><td class="mono">Killzone</td><td>Fenêtre horaire à forte activité institutionnelle : Londres 9h–11h30, New York 14h30–17h (Paris)</td></tr>
+<tr><td class="mono">Judas swing</td><td>Faux départ à l'ouverture d'une session, qui sert de sweep avant le vrai mouvement</td></tr>
+<tr><td class="mono">R</td><td>Unité de risque : 1R = le montant risqué sur le trade ; tout se mesure en R</td></tr>
+<tr><td class="mono">RR</td><td>Ratio risque/récompense — minimum 1:2 dans la stratégie</td></tr>
+<tr><td class="mono">Winrate</td><td>Pourcentage de trades gagnants</td></tr>
+<tr><td class="mono">Espérance</td><td>Gain moyen par trade = (WR × gain moyen) − (taux de perte × 1R) ; doit être positive</td></tr>
+<tr><td class="mono">Drawdown</td><td>Baisse depuis le plus haut du compte ; limité par des règles strictes en prop firm</td></tr>
+<tr><td class="mono">MFE / MAE</td><td>Excursion maximale favorable / défavorable d'un trade — sert à optimiser TP et SL</td></tr>
+<tr><td class="mono">MGC</td><td>Micro Gold futures — 1 contrat = 10 onces d'or ; l'un des supports possibles</td></tr>
+<tr><td class="mono">Tick</td><td>Plus petite variation de prix d'un contrat</td></tr>
+<tr><td class="mono">Ordre limite</td><td>Ordre placé à un prix meilleur que l'actuel — notre mode d'entrée (le retest vient à nous)</td></tr>
+<tr><td class="mono">Spread / Slippage</td><td>Écart achat-vente / différence entre prix demandé et obtenu — les coûts cachés</td></tr>
+<tr><td class="mono">Prop firm</td><td>Société qui finance des traders après une évaluation, contre un partage des gains</td></tr>
+<tr><td class="mono">Payout</td><td>Retrait des gains d'un compte financé — le seul gain définitif</td></tr>
+<tr><td class="mono">MSS</td><td>Market Structure Shift — CHoCH exécuté avec displacement (FVG laissé) : le retournement « signé »</td></tr>
+<tr><td class="mono">Inducement (IDM)</td><td>Pool-appât créé juste avant la vraie zone, balayé pour piéger les entrées précoces</td></tr>
+<tr><td class="mono">Resting liquidity</td><td>Liquidité dormante : tous les ordres en attente accumulés autour d'un niveau évident</td></tr>
+<tr><td class="mono">Engineered liquidity</td><td>Liquidité fabriquée : niveaux « trop parfaits » construits pour attirer des stops</td></tr>
+<tr><td class="mono">Liquidity grab</td><td>Prise de liquidité au sens large, parfois en plusieurs bougies avant réintégration</td></tr>
+<tr><td class="mono">Breaker block</td><td>Order Block invalidé en clôture qui change de polarité — retesté dans l'autre sens</td></tr>
+<tr><td class="mono">iFVG</td><td>Inversion FVG — gap traversé en clôture qui devient zone du camp opposé</td></tr>
+<tr><td class="mono">BPR</td><td>Balanced Price Range — intersection de deux FVG opposés ; zone de précision maximale</td></tr>
+<tr><td class="mono">Compression / Expansion</td><td>Contraction de volatilité qui accumule la liquidité / displacement qui la dépense</td></tr>
+<tr><td class="mono">Silver Bullet</td><td>Fenêtre horaire ICT (16h–17h Paris) : premier FVG dans le sens confirmé de la session NY</td></tr>
+<tr><td class="mono">PWH / PWL</td><td>Previous Week High / Low — les aimants hebdomadaires de la cascade multi-timeframe</td></tr>
+<tr><td class="mono">Marubozu / Pin bar / Engulfing</td><td>Bougie pleine (momentum) / bougie de rejet (sweep condensé) / avalement (mini-CHoCH)</td></tr>
+<tr><td class="mono">Draw on Liquidity (DOL)</td><td>Le pool que le marché vise actuellement — l'aimant actif de la session</td></tr>
+<tr><td class="mono">External / Internal liquidity</td><td>Liquidité au-delà des extrêmes (stops) / à l'intérieur du range (FVG, OB, équilibre)</td></tr>
+<tr><td class="mono">Liquidity void</td><td>Jambe de prix traversée quasi sans transactions — retraversée aussi vite au retour</td></tr>
+<tr><td class="mono">Repricing / Rebalancing</td><td>Re-cotation violente vers une nouvelle valeur / retour combler un déséquilibre</td></tr>
+<tr><td class="mono">PD Array</td><td>Toute zone Premium/Discount exploitable (breaker, OB, FVG…) — voir la hiérarchie du Module 6</td></tr>
+<tr><td class="mono">Power of Three (PO3 / AMD)</td><td>Accumulation → Manipulation → Distribution : le cycle d'une journée ou d'une bougie</td></tr>
+<tr><td class="mono">2022 Model / Unicorn</td><td>Noms ICT du Setup GSS Classique / du chevauchement breaker + FVG</td></tr>
+<tr><td class="mono">Trend / Range / Neutral day</td><td>Les types de journées du Module 12 — chacun impose son adaptation</td></tr>
+<tr><td class="mono">Kelly / Fixed Fractional</td><td>Modèles de sizing : optimal théorique intenable / % fixe du capital (le modèle de la formation)</td></tr>
+<tr><td class="mono">Risk of Ruin</td><td>Probabilité de perte irrécupérable — ce que le sizing à 0,75 % rend quasi nulle</td></tr>
+<tr><td class="mono">Tilt</td><td>État de dérèglement émotionnel où les règles semblent optionnelles — se quitte, ne se pilote pas</td></tr>
+<tr><td class="mono">FOMC drift / Judas de news</td><td>Faux mouvement d'anticipation avant une annonce / premier spike mensonger d'une news</td></tr>
+</table></div>
+</dialog><footer class="frisk">Avertissement : le trading comporte un risque de perte en capital. Contenu strictement éducatif — aucun conseil en investissement.</footer>
+<script>window.GSS_LEARN_SLUGS=["01-le-trading-lor-et-toi","02-lire-un-graphique","03-bougies-japonaises","04-structure-de-marche","05-la-liquidite","06-zones-institutionnelles","07-multi-timeframe","08-indicateurs","09-setup-a-plus","10-bibliotheque-de-setups","11-gestion-du-risque","12-sessions-killzones","13-journal","14-backtesting","15-psychologie","16-objectifs","17-tradingview","18-correlations","19-saisonnalite","20-execution","21-order-flow","22-prop-firm","23-etude-de-cas","24-trader-durable"];</script>
+<script src="../assets/formation.js" defer></script>
+</body>
+</html>

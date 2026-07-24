@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 05 · La liquidité — Gold Sweep Academy</title>
+<meta name="theme-color" content="#070604">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A5%87%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/formation.css">
+</head>
+<body class="formation">
+<nav class="ftoc" id="ftoc" aria-label="Sommaire de la formation">
+<div class="ftoc-h">Formation</div>
+<a href="index.html"><span class="n">◆</span> Accueil &amp; progression</a><div class="ftoc-h">Partie I — Bases</div><a href="01-le-trading-lor-et-toi.html" class="tocitem" data-mod-slug="01-le-trading-lor-et-toi"><span class="n">01</span> Le trading, l'or et toi</a><a href="02-lire-un-graphique.html" class="tocitem" data-mod-slug="02-lire-un-graphique"><span class="n">02</span> Lire un graphique comme un pro</a><a href="03-bougies-japonaises.html" class="tocitem" data-mod-slug="03-bougies-japonaises"><span class="n">03</span> Bougies japonaises : lire le combat acheteurs / vendeurs</a><div class="ftoc-h">Partie II — Structure & liquidité</div><a href="04-structure-de-marche.html" class="tocitem" data-mod-slug="04-structure-de-marche"><span class="n">04</span> La structure de marché</a><a href="05-la-liquidite.html" class="tocitem cur" data-mod-slug="05-la-liquidite"><span class="n">05</span> La liquidité</a><a href="06-zones-institutionnelles.html" class="tocitem" data-mod-slug="06-zones-institutionnelles"><span class="n">06</span> Zones institutionnelles : OB, FVG, Premium/Discount</a><a href="07-multi-timeframe.html" class="tocitem" data-mod-slug="07-multi-timeframe"><span class="n">07</span> Analyse multi-timeframe : du Monthly au M1</a><div class="ftoc-h">Partie III — Confluence & exécution</div><a href="08-indicateurs.html" class="tocitem" data-mod-slug="08-indicateurs"><span class="n">08</span> Les indicateurs de confluence</a><a href="09-setup-a-plus.html" class="tocitem" data-mod-slug="09-setup-a-plus"><span class="n">09</span> Le Setup A+ : le modèle d'entrée complet</a><a href="10-bibliotheque-de-setups.html" class="tocitem" data-mod-slug="10-bibliotheque-de-setups"><span class="n">10</span> La bibliothèque de setups</a><a href="11-gestion-du-risque.html" class="tocitem" data-mod-slug="11-gestion-du-risque"><span class="n">11</span> Gestion du risque & money management</a><a href="12-sessions-killzones.html" class="tocitem" data-mod-slug="12-sessions-killzones"><span class="n">12</span> Sessions, killzones & routine quotidienne</a><div class="ftoc-h">Partie IV — Rigueur & mental</div><a href="13-journal.html" class="tocitem" data-mod-slug="13-journal"><span class="n">13</span> Journal, erreurs & plan 30 jours</a><a href="14-backtesting.html" class="tocitem" data-mod-slug="14-backtesting"><span class="n">14</span> Backtesting : valider avant de risquer</a><a href="15-psychologie.html" class="tocitem" data-mod-slug="15-psychologie"><span class="n">15</span> Psychologie du scalpeur</a><a href="16-objectifs.html" class="tocitem" data-mod-slug="16-objectifs"><span class="n">16</span> Objectifs réalistes & trajectoire</a><div class="ftoc-h">Partie V — Approfondissements</div><a href="17-tradingview.html" class="tocitem" data-mod-slug="17-tradingview"><span class="n">17</span> La boîte à outils TradingView</a><a href="18-correlations.html" class="tocitem" data-mod-slug="18-correlations"><span class="n">18</span> Les corrélations de l'or</a><a href="19-saisonnalite.html" class="tocitem" data-mod-slug="19-saisonnalite"><span class="n">19</span> Saisonnalité &amp; contexte macro de l'or</a><a href="20-execution.html" class="tocitem" data-mod-slug="20-execution"><span class="n">20</span> Exécution &amp; microstructure</a><a href="21-order-flow.html" class="tocitem" data-mod-slug="21-order-flow"><span class="n">21</span> Lecture du flux : Order Flow, DOM &amp; Footprint</a><a href="22-prop-firm.html" class="tocitem" data-mod-slug="22-prop-firm"><span class="n">22</span> Spécial prop firm : décoder les règles, passer, durer</a><a href="23-etude-de-cas.html" class="tocitem" data-mod-slug="23-etude-de-cas"><span class="n">23</span> Étude de cas : un mois de trading, documenté de A à Z</a><a href="24-trader-durable.html" class="tocitem" data-mod-slug="24-trader-durable"><span class="n">24</span> Le trader durable : hygiène de vie, sécurité &amp; cadre français</a><div class="ftoc-h">Validation</div><a href="examen.html" class="tocitem"><span class="n">25</span> Examen final</a><div class="ftoc-h">Référence</div><a href="glossaire.html" class="tocitem"><span class="n">§</span> Glossaire de l'académie</a></nav><div class="fscrim" id="fscrim"></div>
+<header class="fbar">
+<button class="ftoc-btn" aria-expanded="false" aria-controls="ftoc">☰ Sommaire</button>
+<div class="fcrumb">Formation › Partie II — Structure & liquidité › <b>Module 05</b></div>
+<div class="fnav"><a href="04-structure-de-marche.html" data-nav-prev aria-label="Précédent">◀</a><a href="06-zones-institutionnelles.html" data-nav-next aria-label="Suivant">▶</a></div>
+</header>
+<div class="fprog"><div id="fprogfill"></div></div><main class="fmain">
+<div class="wrap">
+<div class="mod-head"><span class="mod-num">05</span><div class="mod-head-txt"><div class="eyebrow">PARTIE II — Module 5 · Le carburant</div>
+<h2>La liquidité</h2><p class="mod-goal"><b>🎯 Objectif du module :</b> cartographier la liquidité du jour chaque matin et reconnaître un stop hunt pendant qu'il se produit.</p></div></div>
+<p class="lead">La liquidité = les stops des autres traders. C'est l'aimant du prix : le marché ne bouge pas au hasard, il va de pool en pool.</p>
+
+<h3>5.1 — Buy-side & Sell-side liquidity</h3>
+<div class="grid2">
+<div class="card buy"><h4>Buy-side liquidity (BSL)</h4><p>Au-dessus des sommets : stops des vendeurs + ordres buy-stop des breakout traders. Le prix monte la chercher avant de baisser… ou pour alimenter une vraie cassure.</p></div>
+<div class="card sell"><h4>Sell-side liquidity (SSL)</h4><p>Sous les creux : stops des acheteurs + ordres sell-stop. Le prix plonge la chercher avant de monter. C'est le carburant des retournements haussiers.</p></div>
+</div>
+
+<h3>5.2 — Où se cachent les pools de liquidité ?</h3>
+<p>La liquidité ne se cache pas au hasard : elle s'accumule aux endroits <b>où beaucoup de traders ont pris la même décision</b>. Et comme la majorité des particuliers apprennent les mêmes règles dans les mêmes livres, leurs stops finissent tous aux mêmes prix.</p>
+<p>Concrètement, ces zones sont repérables à l'œil nu et se marquent en trois minutes chaque matin : les extrêmes de la veille (PDH/PDL), ceux de la semaine (PWH/PWL), les bornes du range asiatique, et surtout les <b>equal highs / equal lows</b> — ces sommets ou creux qui s'arrêtent au même niveau et forment une ligne horizontale trop nette pour être innocente.</p>
+<p>Le tableau ci-dessous les classe par force. Retiens le principe : plus un niveau est visible et respecté par tout le monde, plus il contient de stops, et plus il devient une cible attractive.</p>
+<table>
+<tr><th>Pool</th><th>Description</th><th>Force</th></tr>
+<tr><td class="mono">Equal Highs / Lows (EQH/EQL)</td><td>2+ sommets ou creux au même niveau — les stops s'y empilent</td><td>★★★</td></tr>
+<tr><td class="mono">High/Low de session Asie</td><td>Range nocturne : cible favorite de l'ouverture de Londres</td><td>★★★</td></tr>
+<tr><td class="mono">High/Low de la veille (PDH/PDL)</td><td>Niveaux journaliers surveillés par tout le monde</td><td>★★★</td></tr>
+<tr><td class="mono">Swing highs/lows évidents</td><td>Tout sommet/creux visible en M15 attire des stops</td><td>★★</td></tr>
+<tr><td class="mono">Liquidité de trendline</td><td>Stops accumulés le long d'une oblique évidente</td><td>★★</td></tr>
+<tr><td class="mono">Niveaux ronds</td><td>Nombres psychologiques (ex. 00 / 50 sur l'or)</td><td>★</td></tr>
+</table>
+<figure id="schema-19">
+<svg viewBox="0 0 680 340">
+  <text class="ann" x="230" y="26" font-weight="600">LA CARTE DE LIQUIDITÉ DU JOUR</text>
+  <line class="liq" x1="60" y1="55" x2="470" y2="55"/><text class="ann o" x="480" y="59">PDH (high veille) $$$</text>
+  <line class="liq" x1="60" y1="95" x2="470" y2="95"/><text class="ann o" x="480" y="99">EQH — equal highs $$</text>
+  <line class="liq" x1="60" y1="130" x2="470" y2="130"/><text class="ann o" x="480" y="134">High Asie $$</text>
+  <rect x="60" y="150" width="410" height="55" rx="6" fill="rgba(162,149,111,.10)" stroke="#4A4028"/>
+  <text class="ann" x="200" y="183">PRIX ACTUEL (range)</text>
+  <line class="liq" x1="60" y1="225" x2="470" y2="225"/><text class="ann o" x="480" y="229">Low Asie $$</text>
+  <line class="liq" x1="60" y1="262" x2="470" y2="262"/><text class="ann o" x="480" y="266">EQL — equal lows $$</text>
+  <line class="liq" x1="60" y1="302" x2="470" y2="302"/><text class="ann o" x="480" y="306">PDL (low veille) $$$</text>
+  <path class="arrow" d="M40 165 L40 70" marker-end="url(#av1)"/>
+  <path class="arrow" d="M40 195 L40 290" marker-end="url(#av1)"/>
+  <defs><marker id="av1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#D4AF37"/></marker></defs>
+  <text class="ann" x="60" y="330">Le prix est un aimant entre deux pools : il ira chercher l'un, puis souvent l'autre.</text>
+</svg>
+<figcaption><b>Schéma 19</b> — À marquer chaque matin AVANT la session : ces niveaux sont les cibles ET les déclencheurs de tous les trades du jour.</figcaption>
+</figure>
+
+<figure id="schema-20">
+<svg viewBox="0 0 680 320">
+  <text class="ann" x="40" y="24" fill="#FFFFFF" font-weight="600">La carte des pools : classer les cibles avant d'ouvrir</text>
+  <line class="liq" x1="48" y1="70" x2="640" y2="70"/><text class="ann o" x="52" y="64">PDH — aimant du haut</text>
+  <line class="lvl" x1="48" y1="105" x2="640" y2="105"/><text class="ann" x="52" y="99" fill="#8C8C8C">equal highs (buy stops)</text>
+  <line class="wick" x1="90" y1="144" x2="90" y2="166"/><rect class="cu" x="84" y="150" width="13" height="10"/><line class="wick" x1="114" y1="146" x2="114" y2="164"/><rect class="cd" x="108" y="150" width="13" height="8"/><line class="wick" x1="138" y1="142" x2="138" y2="164"/><rect class="cu" x="132" y="148" width="13" height="10"/><line class="wick" x1="162" y1="142" x2="162" y2="162"/><rect class="cd" x="156" y="148" width="13" height="8"/><line class="wick" x1="186" y1="140" x2="186" y2="162"/><rect class="cu" x="180" y="146" width="13" height="10"/><line class="wick" x1="210" y1="140" x2="210" y2="160"/><rect class="cd" x="204" y="146" width="13" height="8"/><line class="wick" x1="234" y1="138" x2="234" y2="160"/><rect class="cu" x="228" y="144" width="13" height="10"/><line class="wick" x1="258" y1="138" x2="258" y2="158"/><rect class="cd" x="252" y="144" width="13" height="8"/>
+  <line class="lvl" x1="48" y1="176" x2="640" y2="176"/><text class="ann" x="52" y="192" fill="#8C8C8C">low Asie</text>
+  <line class="liq" x1="48" y1="210" x2="640" y2="210"/><text class="ann o" x="52" y="228">PDL — aimant du bas (double pool)</text>
+  <text class="ann" x="40" y="300" fill="#D9D9D9">Quatre aimants, pas égaux : le double pool bas (low Asie + PDL) est la cible la plus probable de la session.</text>
+</svg>
+<figcaption><b>Schéma 20</b> — Avant d'ouvrir, on trace la carte : PDH/PDL, equal highs/lows, extrêmes d'Asie. Deux pools proches forment un « double pool » — la cible la plus juteuse pour les institutions.</figcaption>
+</figure>
+
+<h3>5.3 — Le sweep de liquidité (stop hunt)</h3>
+<p>Le <strong>sweep</strong> est le moment clé de toute la stratégie : le prix dépasse un pool de liquidité <em>en mèche</em>, déclenche les stops, puis <strong>réintègre immédiatement</strong>. Les gros acteurs viennent de remplir leurs ordres — le vrai mouvement peut commencer.</p>
+
+<figure id="schema-21">
+<svg viewBox="0 0 640 310">
+  <!-- equal lows -->
+  <line class="wick r" x1="70" y1="90" x2="70" y2="150"/><rect class="cd" x="63" y="95" width="14" height="45" rx="2"/>
+  <line class="wick r" x1="100" y1="140" x2="100" y2="205"/><rect class="cd" x="93" y="145" width="14" height="52" rx="2"/>
+  <line class="wick g" x1="130" y1="208" x2="130" y2="155"/><rect class="cu" x="123" y="162" width="14" height="42" rx="2"/>
+  <line class="wick r" x1="160" y1="160" x2="160" y2="207"/><rect class="cd" x="153" y="165" width="14" height="36" rx="2"/>
+  <line class="wick g" x1="190" y1="209" x2="190" y2="160"/><rect class="cu" x="183" y="168" width="14" height="36" rx="2"/>
+  <line class="wick r" x1="220" y1="165" x2="220" y2="200"/><rect class="cd" x="213" y="168" width="14" height="28" rx="2"/>
+  <!-- sweep candle -->
+  <line class="wick g" x1="250" y1="255" x2="250" y2="150"/><rect class="cu" x="243" y="158" width="14" height="50" rx="2"/>
+  <line class="wick g" x1="280" y1="160" x2="280" y2="100"/><rect class="cu" x="273" y="108" width="14" height="48" rx="2"/>
+  <line class="wick g" x1="310" y1="105" x2="310" y2="55"/><rect class="cu" x="303" y="62" width="14" height="40" rx="2"/>
+  <!-- EQL line -->
+  <line class="liq" x1="90" y1="209" x2="330" y2="209"/>
+  <text class="ann o" x="340" y="213">EQL — sell-side liquidity $$$</text>
+  <!-- sweep annotation -->
+  <circle cx="250" cy="248" r="6" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  <path class="arrow" d="M250 275 L250 262" marker-end="url(#ah2)"/>
+  <defs><marker id="ah2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#D4AF37"/></marker></defs>
+  <text class="ann o" x="180" y="295" font-weight="600">SWEEP : mèche sous les EQL + réintégration</text>
+  <text class="ann g" x="345" y="80">→ les stops sont pris,</text>
+  <text class="ann g" x="345" y="100">le vrai mouvement démarre</text>
+</svg>
+<figcaption><b>Schéma 21</b> — Sweep de sell-side : mèche sous les equal lows, clôture au-dessus → stop hunt validé, biais acheteur activé.</figcaption>
+</figure>
+
+<div class="grid2">
+<div class="card buy"><h4>✓ Sweep valide (on trade)</h4><p>Dépassement en <b>mèche</b>, clôture qui réintègre le range, idéalement en une à trois bougies, suivi d'un CHoCH M1.</p></div>
+<div class="card sell"><h4>✗ Vraie cassure (on ne trade pas contre)</h4><p><b>Clôture franche</b> au-delà du niveau, bougies pleines, pas de réintégration → c'est un breakout, pas un sweep. On attend.</p></div>
+</div>
+<div class="fig2">
+<figure id="schema-22">
+<svg viewBox="0 0 330 260">
+  <line class="liq" x1="20" y1="60" x2="240" y2="60"/>
+  <text class="ann o" x="20" y="48">EQH — buy-side $$</text>
+  <line class="wick g" x1="70" y1="130" x2="70" y2="62"/><rect class="cu" x="62" y="70" width="16" height="52" rx="2"/>
+  <line class="wick r" x1="110" y1="64" x2="110" y2="125"/><rect class="cd" x="102" y="70" width="16" height="46" rx="2"/>
+  <line class="wick g" x1="150" y1="128" x2="150" y2="64"/><rect class="cd" x="142" y="80" width="16" height="40" rx="2"/>
+  <line class="wick r" x1="190" y1="25" x2="190" y2="120"/><rect class="cd" x="182" y="72" width="16" height="42" rx="2"/>
+  <line class="wick r" x1="230" y1="115" x2="230" y2="185"/><rect class="cd" x="222" y="120" width="16" height="56" rx="2"/>
+  <line class="wick r" x1="270" y1="180" x2="270" y2="235"/><rect class="cd" x="262" y="184" width="16" height="44" rx="2"/>
+  <circle cx="190" cy="32" r="6" fill="none" stroke="#D4AF37" stroke-width="2.5"/>
+  <text class="ann r" x="55" y="252" font-weight="600">sweep du haut → biais vendeur</text>
+</svg>
+<figcaption><b>Schéma 22</b> — Sweep de buy-side (miroir du <a href="#schema-21">Schéma 21</a>)</figcaption>
+</figure>
+<figure id="schema-23">
+<svg viewBox="0 0 330 260">
+  <rect x="15" y="80" width="130" height="90" rx="6" fill="rgba(162,149,111,.12)" stroke="#4A4028"/>
+  <text class="ann" x="28" y="72">RANGE ASIE 01h–08h</text>
+  <line class="liq" x1="15" y1="170" x2="250" y2="170"/>
+  <path class="path-r" d="M145 125 L175 150 L195 210"/>
+  <path class="path-g" d="M195 210 L225 155 L245 175 L285 90 L310 45"/>
+  <circle cx="195" cy="205" r="6" fill="none" stroke="#D4AF37" stroke-width="2.5"/>
+  <text class="ann o" x="150" y="238" font-weight="600">09h : sweep du low Asie</text>
+  <text class="ann g" x="210" y="70">puis expansion</text>
+  <text class="ann" x="18" y="252">le scénario le plus fréquent à l'open de Londres</text>
+</svg>
+<figcaption><b>Schéma 23</b> — Le classique « Londres balaie l'Asie »</figcaption>
+</figure>
+</div>
+
+<div class="warn"><div class="t">Piège classique</div><p>Acheter sur des equal lows « parce que c'est un support ». Faux : les EQL sont une <strong>cible</strong>, pas un support. Le prix viendra presque toujours les balayer avant de monter. On entre <em>après</em> le sweep, jamais avant.</p></div>
+<div class="ex"><div class="t">Exemple chiffré — sweep du low Asie</div>
+<p>Range asiatique de la nuit : <code>3 336.2</code> – <code>3 342.8</code>. Biais M15 haussier. À 09h07, une bougie M1 pique à <code>3 335.1</code> (1,1 $ sous le low Asie) puis clôture à <code>3 337.0</code>, à l'intérieur du range, avec un pic de volume.</p>
+<p><b>Lecture :</b> sell-side du range Asie consommée, réintégration immédiate → le déclencheur n°1 est validé. On ne fait toujours RIEN : on attend maintenant le CHoCH M1 (Module 9). Si le prix avait clôturé sous 3 336.2 en bougies pleines → vraie cassure, scénario annulé.</p></div>
+
+
+<figure id="schema-24">
+<svg viewBox="0 0 680 310">
+  <text class="ann o" x="40" y="24" font-weight="600">Le trade type : sweep de sell-side puis retournement</text>
+  <line class="liq" x1="100" y1="150" x2="560" y2="150"/>
+  <text class="ann o" x="565" y="154">equal lows (stops)</text>
+  <line class="wick" x1="60" y1="146" x2="60" y2="162"/><rect class="cd" x="54" y="150" width="13" height="8"/><line class="wick" x1="84" y1="144" x2="84" y2="164"/><rect class="cu" x="78" y="150" width="13" height="8"/><line class="wick" x1="108" y1="136" x2="108" y2="156"/><rect class="cu" x="102" y="140" width="13" height="10"/><line class="wick" x1="132" y1="134" x2="132" y2="153"/><rect class="cd" x="126" y="140" width="13" height="8"/><line class="wick" x1="156" y1="132" x2="156" y2="152"/><rect class="cu" x="150" y="138" width="13" height="10"/><line class="wick" x1="180" y1="118" x2="180" y2="142"/><rect class="cu" x="174" y="130" width="13" height="8"/><line class="wick" x1="204" y1="126" x2="204" y2="150"/><rect class="cd" x="198" y="130" width="13" height="15"/><line class="wick" x1="228" y1="140" x2="228" y2="166"/><rect class="cd" x="222" y="145" width="13" height="15"/><line class="wick" x1="252" y1="156" x2="252" y2="180"/><rect class="cd" x="246" y="160" width="13" height="14"/>
+  <circle cx="180" cy="142" r="7" fill="none" stroke="#D4AF37" stroke-width="2.5"/>
+  <text class="ann o" x="60" y="200">la mèche balaie sous les lows...</text>
+  <path class="arrow" d="M204 150 Q 210 140 205 132" stroke="#2BA88A"/>
+  <text class="ann g" x="215" y="128">...réintègre et repart : les vendeurs sont piégés</text>
+  <text class="ann" x="40" y="298" fill="#D9D9D9">Les particuliers vendent la cassure des lows ; les institutions leur achètent leurs stops, puis font monter le prix.</text>
+</svg>
+<figcaption><b>Schéma 24</b> — Le cœur de la méthode : une série d'equal lows attire les stops, une mèche vient les balayer, puis le prix réintègre et repart à la hausse. Le sweep + réintégration est le déclencheur.</figcaption>
+</figure>
+
+<h3>5.4 — Où les particuliers placent leurs stops (la carte que lisent les institutions)</h3>
+<figure id="schema-25">
+<svg viewBox="0 0 680 320">
+  <path class="path-g" d="M60 260 L130 190 L170 225 L240 150 L285 185 L350 115 L400 145 L470 80"/>
+  <path d="M95 245 L470 85" stroke="#D9D9D9" stroke-width="1.5" stroke-dasharray="6 5" fill="none"/>
+  <line class="liq" x1="140" y1="228" x2="330" y2="228"/>
+  <line class="liq" x1="250" y1="188" x2="440" y2="188"/>
+  <text class="ann o" x="60" y="300">① sous les creux « évidents » (le support des livres)</text>
+  <text class="ann o" x="345" y="215">② sous les HL de la tendance</text>
+  <text class="ann o" x="220" y="55">③ le long de la trendline</text>
+  <path class="arrow" d="M290 60 Q 330 90 355 128"/>
+  <text class="ann" x="60" y="35" fill="#FFFFFF" font-weight="600">Trois réflexes retail = trois gisements de stops.</text>
+</svg>
+<figcaption><b>Schéma 25</b> — Les stops retail se posent toujours aux mêmes endroits : sous les supports visibles, sous les higher lows, le long des obliques. Les institutions n'ont pas besoin de deviner — elles savent où c'est, comme toi maintenant.</figcaption>
+</figure>
+<p>Pourquoi les institutions viennent les chercher : pour exécuter un ordre d'achat de plusieurs centaines de millions sans faire exploser le prix, il faut des <strong>vendeurs en face</strong>. Le plus grand réservoir de vendeurs instantanés ? Les stops des acheteurs (un stop d'acheteur EST un ordre de vente). Déclencher un pool de sell-side, c'est ouvrir un robinet de contreparties — puis acheter tout ce qui sort. Comment l'exploiter : ne jamais être le stop — être celui qui entre <em>après</em> la collecte, avec eux.</p>
+
+<h3>5.5 — Le vocabulaire complet de la liquidité</h3>
+<div class="notion"><div class="notion-h"><b>Resting liquidity (liquidité dormante)</b><span>le gisement</span></div><dl>
+<dt>Définition</dt><dd>Tous les ordres en attente autour d'un niveau : stops, buy/sell stops de breakout, ordres limites. Elle « dort » jusqu'à ce que le prix vienne la réveiller.</dd>
+<dt>Identification</dt><dd>Partout où un niveau est ÉVIDENT pour le plus grand nombre : EQH/EQL, extrêmes de session, chiffres ronds, patterns scolaires (triangles, double tops).</dd>
+<dt>Erreur fréquente</dt><dd>Croire qu'un niveau évident est solide. Plus un niveau est regardé, plus il concentre de liquidité — plus il sera visité.</dd>
+</dl></div>
+<div class="notion"><div class="notion-h"><b>Inducement (IDM) — l'appât</b><span>le piège avant la zone</span></div><dl>
+<dt>Définition</dt><dd>Un petit pool de liquidité créé JUSTE AVANT la vraie zone institutionnelle : un mini-pullback dont le creux attire les entrées précoces et leurs stops.</dd>
+<dt>Fonctionnement</dt><dd>Le prix approche d'un Order Block. Les traders SMC pressés achètent le premier creux venu (l'IDM). Le prix balaie ce creux — éjecte les pressés — PUIS touche le vrai OB en dessous, et repart.</dd>
+<dt>Usage institutionnel</dt><dd>Double récolte : les stops de l'IDM financent le remplissage des ordres dans la zone réelle. C'est pour ça que « la zone est souvent touchée au 2ᵉ essai, pas au 1ᵉʳ ».</dd>
+<dt>Identification</dt><dd>Entre le prix actuel et ta zone : y a-t-il un creux/sommet intermédiaire évident ? Si oui, attends-toi à son sweep AVANT que ta zone soit servie.</dd>
+<dt>Erreur fréquente</dt><dd>Entrer sur le premier repli venu. Règle : pas d'entrée tant que l'inducement au-dessus/au-dessous de la zone n'a pas été consommé.</dd>
+</dl></div>
+<div class="notion"><div class="notion-h"><b>Sweep vs Grab vs Stop hunt</b><span>les nuances</span></div><dl>
+<dt>Définitions</dt><dd><b>Stop hunt</b> : l'intention (aller déclencher des stops). <b>Liquidity sweep</b> : l'exécution en mèche avec réintégration — le pool est pris et rejeté. <b>Liquidity grab</b> : la prise de liquidité au sens large, parfois en plusieurs bougies qui s'installent au-delà du niveau avant de revenir.</dd>
+<dt>Ce qui compte en pratique</dt><dd>Peu importe le mot : la question opérationnelle est binaire — <b>réintégration (on trade le retour)</b> ou <b>acceptation au-delà du niveau (vraie cassure, on ne trade pas contre)</b>. Un grab qui traîne 4-5 bougies au-delà du niveau avant de réintégrer reste exploitable, mais avec un SL plus large.</dd>
+</dl></div>
+<div class="notion"><div class="notion-h"><b>Engineered liquidity (liquidité fabriquée)</b><span>le piège construit</span></div><dl>
+<dt>Définition</dt><dd>Quand le mouvement du prix CRÉE volontairement un niveau évident pour y attirer des stops : des equal highs trop parfaits, un range trop propre, une trendline respectée trop de fois.</dd>
+<dt>Pourquoi ça existe</dt><dd>Les algos savent que le retail trade ce qu'il voit. Fabriquer un « support » testé trois fois garantit qu'il sera chargé de stops au 4ᵉ passage — le carburant du vrai mouvement.</dd>
+<dt>Identification</dt><dd>Méfiance maximale devant la perfection : 3 touches exactement égales au tick près, c'est rarement le hasard. Plus c'est propre, plus c'est probablement construit.</dd>
+<dt>Erreur fréquente</dt><dd>« Ce support a tenu 3 fois, il est solide » → c'est l'inverse : il est mûr.</dd>
+</dl></div>
+
+<h3>5.6 — Avant / Après : la même journée, deux lectures</h3>
+<p>Voici l'exercice qui fait basculer la compréhension de la plupart des élèves : la <b>même journée</b>, regardée deux fois.</p>
+<p>À gauche, le graphique tel qu'un débutant le voit à 09h04 — une chute violente, un plus bas cassé, la panique. À droite, le même graphique avec la carte des pools tracée à 08h45, avant l'ouverture. Le « mouvement imprévisible » de gauche devient, à droite, exactement ce que la carte annonçait : le prix est allé chercher le pool le plus juteux.</p>
+<p>La liquidité ne prédit pas l'avenir — aucun outil ne le fait. Elle fait quelque chose de plus utile : elle <b>liste les cibles probables à l'avance</b>, ce qui transforme la surprise en scénario attendu. C'est toute la différence entre subir une séance et la lire.</p>
+<figure id="schema-26">
+<svg viewBox="0 0 680 320">
+  <text class="ann" x="60" y="28" font-weight="600" fill="#FFFFFF">AVANT (la carte du matin)</text>
+  <rect x="50" y="120" width="240" height="90" rx="6" fill="rgba(162,149,111,.10)" stroke="#4A4028"/>
+  <line class="liq" x1="50" y1="120" x2="290" y2="120"/><text class="ann o" x="52" y="112">EQH + high Asie $$</text>
+  <line class="liq" x1="50" y1="210" x2="290" y2="210"/><text class="ann o" x="52" y="232">PDL proche des lows $$$</text>
+  <text class="ann" x="80" y="170">range nocturne</text>
+  <text class="ann" x="50" y="290">Plan écrit : « sweep d'UN des deux pools,</text>
+  <text class="ann" x="50" y="308">puis MSS → je trade le retour vers l'autre »</text>
+  <line x1="330" y1="20" x2="330" y2="300" stroke="#2E2614"/>
+  <text class="ann" x="370" y="28" font-weight="600" fill="#FFFFFF">APRÈS (ce que le prix a fait)</text>
+  <path class="path-r" d="M370 165 L400 150 L425 195 L450 235"/>
+  <circle cx="450" cy="230" r="6" fill="none" stroke="#D4AF37" stroke-width="2.5"/>
+  <text class="ann o" x="392" y="262">09h04 sweep du PDL ✓</text>
+  <path class="path-g" d="M450 235 L490 175 L515 195 L560 120 L590 140 L645 70"/>
+  <line class="liq" x1="500" y1="78" x2="660" y2="78"/>
+  <text class="ann g" x="540" y="60">TP : les EQH d'en face</text>
+  <text class="ann g" x="480" y="300">le plan du matin s'est déroulé tel quel</text>
+</svg>
+<figcaption><b>Schéma 26</b> — L'avant/après qui change tout : la carte tracée à 08h45 CONTIENT déjà le trade de 09h04. La liquidité ne prédit pas l'avenir — elle liste les seules destinations possibles.</figcaption>
+</figure>
+
+
+<h3>5.7 — La machine derrière le prix : comment travaillent les algorithmes</h3>
+<p>Plus de 70 % du volume sur les futures est exécuté par des algorithmes. Comprendre leur problème, c'est comprendre pourquoi le prix fait CE qu'il fait :</p>
+<div class="grid2">
+<div class="card gold"><h4>Leur problème : la contrepartie</h4><p>Pour acheter 2 000 contrats, il faut 2 000 contrats à vendre EN FACE, maintenant, sans faire décoller le prix. Les algos d'exécution découpent donc les ordres et vont là où les vendeurs se déclenchent tout seuls : <b>les stops des acheteurs</b>. Chaque sweep est la solution d'un problème d'exécution — jamais un accident.</p></div>
+<div class="card gold"><h4>Pourquoi les ranges existent</h4><p>Un range est une <b>usine à liquidité</b> : plus il dure, plus les stops s'empilent au-dessus et en dessous, plus la contrepartie disponible grossit. L'algo n'a aucune raison de sortir du range tant que la récolte n'est pas suffisante — puis il casse du côté où il PREND, pas du côté où il va.</p></div>
+</div>
+<div class="grid2">
+<div class="card sell"><h4>Pourquoi les faux breakouts existent</h4><p>Un breakout attire deux carburants d'un coup : les stops de ceux qui étaient contre, et les entrées de ceux qui chassent la cassure. L'algo qui veut vendre fait donc d'abord monter le prix hors du range — il vend dans l'euphorie des breakouters, puis laisse tomber. Le faux breakout n'est pas un échec du marché : c'est un produit fini.</p></div>
+<div class="card buy"><h4>Le cycle complet : accumulation → manipulation → distribution</h4><p>① <b>Accumulation</b> : construction discrète de la position dans un range (l'usine tourne). ② <b>Manipulation</b> : le sweep/Judas qui récolte la contrepartie. ③ <b>Distribution</b> : l'expansion où la position est déroulée vers la vraie cible. Tu connais déjà ce cycle sous un autre nom : Asie → sweep d'ouverture → tendance de session.</p></div>
+</div>
+
+<h3>5.8 — Liquidité avancée : le vocabulaire complet des professionnels</h3>
+<div class="notion"><div class="notion-h"><b>External vs Internal liquidity</b><span>la boussole des cibles</span></div><dl>
+<dt>Définition</dt><dd><b>Externe</b> : la liquidité AU-DELÀ des extrêmes du range de référence (au-dessus du high, sous le low) — les stops. <b>Interne</b> : tout ce qui est DEDANS — FVG, OB, équilibre, mini-pools.</dd>
+<dt>La règle de circulation</dt><dd>Le prix alterne : il prend de l'externe → revient réparer de l'interne → repart chercher l'externe opposée. Quand un extrême vient d'être sweepé, la cible suivante est presque toujours interne (le FVG du chemin) puis l'externe d'en face.</dd>
+<dt>Usage pratique</dt><dd>C'est ta boussole TP : après le sweep du PDL, TP1 = liquidité interne (FVG/équilibre), TP2 = externe opposée (PDH). Tu appliques déjà cette règle sans le savoir depuis le Module 9.</dd>
+</dl></div>
+<figure id="schema-27">
+<svg viewBox="0 0 680 300">
+  <line class="liq" x1="60" y1="60" x2="620" y2="60"/>
+  <text class="ann o" x="64" y="52">EXTERNAL (buy-side) — stops au-dessus</text>
+  <line class="liq" x1="60" y1="250" x2="620" y2="250"/>
+  <text class="ann o" x="64" y="270">EXTERNAL (sell-side) — stops en dessous</text>
+  <rect class="zone-fvg" x="250" y="140" width="180" height="30" rx="4"/>
+  <text class="ann" x="300" y="130" fill="#D9D9D9">INTERNAL (FVG, OB, équilibre)</text>
+  <path class="path-r" d="M80 120 L150 235 L140 220 L200 252"/>
+  <circle cx="200" cy="250" r="7" fill="none" stroke="#D4AF37" stroke-width="2.5"/>
+  <text class="ann o" x="150" y="285">① prend l'externe basse (sweep)</text>
+  <path class="path-g" d="M200 252 L280 168 L320 155"/>
+  <circle cx="322" cy="155" r="7" fill="none" stroke="#35C79C" stroke-width="2"/>
+  <text class="ann g" x="330" y="150">② répare l'interne (FVG)</text>
+  <path class="path-g" d="M324 155 L420 90 L470 70 L560 62"/>
+  <circle cx="562" cy="60" r="7" fill="none" stroke="#D4AF37" stroke-width="2.5"/>
+  <text class="ann o" x="450" y="48">③ vise l'externe opposée</text>
+  <text class="ann" x="60" y="24" fill="#FFFFFF" font-weight="600">La circulation du prix : externe → interne → externe. Ta boussole de TP.</text>
+</svg>
+<figcaption><b>Schéma 27</b> — External/Internal liquidity : le prix prend les stops (externe), revient combler un déséquilibre (interne), puis repart chercher l'externe d'en face. TP1 = interne, TP2 = externe opposée.</figcaption>
+</figure>
+<div class="notion"><div class="notion-h"><b>Draw on Liquidity (DOL)</b><span>l'aimant du moment</span></div><dl>
+<dt>Définition</dt><dd>LE pool que le marché est en train de viser — l'aimant actif. À chaque instant, une seule question : « quel est le DOL ? » (PWH ? PDL ? les EQH de la nuit ?).</dd>
+<dt>Identification</dt><dd>Le pool le plus proche, le plus gros et pas encore consommé DANS le sens de la structure supérieure. La cascade du Module 7 sert exactement à le nommer chaque matin.</dd>
+<dt>Erreur fréquente</dt><dd>Trader sans DOL écrit noir sur blanc : si tu ne sais pas vers quoi le prix est aspiré, tu n'as pas de plan — tu as une opinion.</dd>
+</dl></div>
+<div class="notion"><div class="notion-h"><b>Liquidity Void · Repricing · Rebalancing</b><span>les trous du marché</span></div><dl>
+<dt>Liquidity void</dt><dd>Une plage de prix traversée d'un trait, quasi sans transactions (plus large qu'un FVG : toute une jambe verticale). Le prix y « flotte » sans support : quand il y revient, il la retraverse souvent aussi vite — vide à l'aller, vide au retour.</dd>
+<dt>Repricing</dt><dd>Le déplacement violent vers un nouveau niveau de valeur après une information (news, gros flux) : l'algo ne « monte » pas, il RE-COTE. Inutile de chercher des pullbacks profonds pendant un repricing — le prix ne reviendra pas offrir l'ancien niveau.</dd>
+<dt>Rebalancing</dt><dd>Le retour dans un déséquilibre pour y échanger le volume manquant (le comblement de FVG du Module 6). Repricing crée les gaps, rebalancing les répare : les deux respirations de la même machine.</dd>
+</dl></div>
+
+<h3>5.9 — Le bestiaire des pièges institutionnels</h3>
+<p>Les mêmes configurations piégeuses reviennent semaine après semaine. Les connaître par leur nom, c'est passer de « je me suis encore fait avoir » à « je reconnais ce piège, je sais quoi en faire ».</p>
+<p>Le tableau qui suit répertorie les principaux, avec pour chacun sa mécanique et sa parade concrète. Ne cherche pas à tous les mémoriser d'un coup : commence par le <b>double sweep</b> (illustré ci-dessous), de loin le plus fréquent et le plus coûteux, puis reviens ici après tes premières semaines de backtest — tu reconnaîtras alors dans le tableau des choses que tu auras vues de tes propres yeux, et elles s'ancreront pour de bon.</p>
+<p>Tu connais le sweep simple. Voici ses variantes vicieuses — les reconnaître t'évitera 80 % des « c'était pourtant un bon setup » :</p>
+<table>
+<tr><th>Piège</th><th>Mécanique</th><th>La parade</th></tr>
+<tr><td class="mono">Double sweep</td><td>Le 1ᵉʳ sweep pique la mèche, le prix remonte un peu… puis re-plonge PLUS BAS avant le vrai départ. Deux récoltes valent mieux qu'une.</td><td>SL derrière TOUTE la mèche + accepter UN re-essai si la séquence complète se représente (règle du Setup 03)</td></tr>
+<tr><td class="mono">Triple sweep</td><td>Rare mais réel les jours de news : trois extensions successives du même extrême avant le retournement.</td><td>Après 2 SL sur le même pool : stop, la journée a décidé sans toi (règle des 2 pertes)</td></tr>
+<tr><td class="mono">Fake MSS / fake BOS</td><td>Cassure de structure en mèche ou sans displacement — l'Échec 04 de la galerie du Module 10.</td><td>Clôture + FVG obligatoires (définition stricte du MSS, Module 4)</td></tr>
+<tr><td class="mono">Engineered breakout</td><td>Un range « trop propre » construit exprès, cassé du côté évident pour piéger les breakouters avant le vrai mouvement inverse.</td><td>Ne jamais trader la 1ʳᵉ cassure d'un range parfait ; attendre le sweep-réintégration</td></tr>
+<tr><td class="mono">Liquidity vacuum</td><td>Après un gros sweep, plus AUCUNE contrepartie ne reste : le prix tombe dans le vide, très vite, sans pullback exploitable.</td><td>Si l'entrée est manquée, elle est manquée — courir après un vacuum, c'est acheter le pire prix de la journée</td></tr>
+<tr><td class="mono">Trap continuation</td><td>Un pullback de continuation « offert » en pleine tendance… juste avant le retournement de fin de session (après 17h, volume mourant).</td><td>Pas de nouveau trade de continuation après 17h (règle horaire, Module 12)</td></tr>
+</table>
+
+<figure id="schema-28">
+<svg viewBox="0 0 680 300">
+  <text class="ann r" x="40" y="24" font-weight="600">Le double sweep : le piège en deux temps</text>
+  <line class="liq" x1="90" y1="146" x2="560" y2="146"/>
+  <text class="ann o" x="565" y="150">lows ciblés</text>
+  <line class="wick" x1="60" y1="136" x2="60" y2="154"/><rect class="cd" x="54" y="140" width="13" height="10"/><line class="wick" x1="84" y1="136" x2="84" y2="156"/><rect class="cu" x="78" y="142" width="13" height="8"/><line class="wick" x1="108" y1="120" x2="108" y2="146"/><rect class="cu" x="102" y="132" width="13" height="10"/><line class="wick" x1="132" y1="128" x2="132" y2="148"/><rect class="cd" x="126" y="132" width="13" height="12"/><line class="wick" x1="156" y1="122" x2="156" y2="150"/><rect class="cu" x="150" y="136" width="13" height="8"/><line class="wick" x1="180" y1="132" x2="180" y2="154"/><rect class="cd" x="174" y="136" width="13" height="14"/><line class="wick" x1="204" y1="146" x2="204" y2="172"/><rect class="cd" x="198" y="150" width="13" height="16"/><line class="wick" x1="228" y1="162" x2="228" y2="186"/><rect class="cd" x="222" y="166" width="13" height="14"/>
+  <circle cx="108" cy="120" r="6" fill="none" stroke="#F06060" stroke-width="2"/>
+  <text class="ann r" x="60" y="200">1er sweep : piège les early buyers</text>
+  <circle cx="156" cy="150" r="6" fill="none" stroke="#D4AF37" stroke-width="2.5"/>
+  <text class="ann o" x="164" y="188">2e sweep plus bas : le vrai</text>
+  <path class="arrow" d="M204 165 Q 260 150 300 138" stroke="#2BA88A"/>
+  <text class="ann g" x="305" y="136">départ après le 2e</text>
+  <text class="ann" x="40" y="285" fill="#D9D9D9">Placer le SL sous TOUTE la structure : un premier sweep en piège d'autres avant le vrai retournement.</text>
+</svg>
+<figcaption><b>Schéma 28</b> — Le double sweep piège ceux qui entrent au premier balayage. Le SL doit couvrir toute la mèche, et on accepte au plus un re-essai si la séquence se représente plus bas.</figcaption>
+</figure>
+
+<h3>5.10 — Exercices d'identification</h3>
+<div class="exo"><div class="t">Exercice 1</div>
+<p>Sous le prix : un creux mineur à 3 337,8 (pullback d'il y a 20 min), puis ton Order Block H1 à 3 334,0–3 335,2. Ton ordre limite est dans l'OB. Le prix descend, balaie 3 337,8, et rebondit AVANT de toucher ton OB. Frustré ?</p>
+<details><summary>Voir la réponse détaillée</summary><div>Non — c'est le scénario <b>inducement</b> du cours, à un détail près : ici le prix est reparti SUR l'IDM sans servir la vraie zone. Deux lectures possibles : ① le rebond sur l'IDM est faible et le prix reviendra chercher l'OB (cas le plus fréquent : on garde l'ordre limite) ; ② le rebond montre un MSS haussier propre avec displacement → la demande était plus pressée que prévu, le trade part sans nous : on ne court pas après. Dans les deux cas, AUCUNE entrée au marché par frustration — c'est exactement l'émotion que l'inducement est conçu pour provoquer.</div></details></div>
+<div class="exo"><div class="t">Exercice 2</div>
+<p>XAU en M5 : trois sommets à 3 351,0 / 3 351,1 / 3 351,0 en deux heures. Un élève te dit : « résistance triple, je vends ici avec SL à 3 352 ». Corrige-le point par point.</p>
+<details><summary>Voir la réponse détaillée</summary><div>① Trois touches quasi égales au tick = <b>equal highs</b>, très probablement de l'<b>engineered liquidity</b> : ce n'est pas un mur, c'est un aimant. ② Son SL à 3 352 est posé PILE dans le pool : il fait partie de la liquidité qui sera récoltée. ③ Le plan corrigé : attendre que le prix DÉPASSE 3 351 en mèche (sweep des EQH + de son stop), vérifier la réintégration + MSS baissier M1, PUIS vendre — SL au-dessus de la mèche du sweep, TP sur la sell-side d'en face. Même direction que lui, mais après la collecte au lieu d'être la collecte.</div></details></div>
+
+<div class="plan"><div class="t">Plan d'action — Module 5</div>
+<ol>
+<li><b>Chaque matin (5 min) :</b> trace PDH/PDL, high/low Asie, EQH/EQL visibles en M15. C'est ta carte de liquidité (schéma du Module 5) — non négociable.</li>
+<li><b>Exercice 1 :</b> sur 10 journées d'historique, note quel pool a été balayé en premier à l'open de Londres, et ce que le prix a fait ensuite. Tu verras la répétition.</li>
+<li><b>Exercice 2 :</b> collectionne 15 sweeps (screenshots) : 10 valides (mèche + réintégration) et 5 vraies cassures. Écris sous chacun pourquoi.</li>
+<li><b>Critère de passage :</b> tu sais dire chaque matin, avant 09h, « la liquidité du jour est LÀ et LÀ » — et le marché va effectivement la chercher.</li>
+</ol></div>
+<div class="ex"><div class="t">Exemple illustré — la carte des pools du matin</div>
+<p>08h47, tu poses ta carte : PDH 3 347,8 / PDL 3 333,0 / equal highs de la nuit 3 342,1-3 342,3 / low Asie 3 334,8. Quatre aimants, mais pas égaux : le PDL et le low Asie forment un DOUBLE pool à 1,8 $ d'écart — la cible la plus juteuse du tableau. Ton plan s'écrit tout seul : « scénario préféré = sweep du double pool bas puis retournement long vers les equal highs ». À 09h17, c'est exactement ce qui se produit. La carte n'a rien prédit : elle avait juste classé les cibles par appétit institutionnel.</p></div>
+</div>
+<div class="fmod-foot"><button class="done-btn" data-slug="05-la-liquidite" aria-pressed="false">○ MARQUER CE MODULE COMME TERMINÉ</button><div class="fnav-pair"><a class="fnav-link prev" data-nav-prev href="04-structure-de-marche.html">◀ Module 04</a><a class="fnav-link next" data-nav-next href="06-zones-institutionnelles.html">Module 06 ▶</a></div></div>
+<div class="wrap" style="margin-bottom:40px"><button class="fnav-link" data-open-glossaire>📖 Ouvrir le glossaire</button></div>
+</main>
+<dialog id="glossaire-dlg">
+<div class="gdlg-head"><h2>Glossaire — 52 termes</h2><button data-close-glossaire>Fermer ✕</button></div>
+<div class="gdlg-body"><table>
+<tr><th>Terme</th><th>Définition</th></tr>
+<tr><td class="mono">BOS</td><td>Break of Structure — cassure en clôture dans le sens de la tendance (continuation)</td></tr>
+<tr><td class="mono">CHoCH</td><td>Change of Character — première cassure en clôture contre la tendance (retournement) ; notre déclencheur</td></tr>
+<tr><td class="mono">HH / HL / LH / LL</td><td>Higher High / Higher Low / Lower High / Lower Low — les swings qui définissent la tendance</td></tr>
+<tr><td class="mono">Liquidité</td><td>Concentration de stops et d'ordres en attente ; le carburant que le prix va chercher</td></tr>
+<tr><td class="mono">BSL / SSL</td><td>Buy-side (au-dessus des sommets) / Sell-side liquidity (sous les creux)</td></tr>
+<tr><td class="mono">EQH / EQL</td><td>Equal Highs / Equal Lows — sommets ou creux égaux où les stops s'empilent</td></tr>
+<tr><td class="mono">PDH / PDL</td><td>Previous Day High / Low — extrêmes de la veille, pools majeurs</td></tr>
+<tr><td class="mono">Sweep / Stop hunt</td><td>Dépassement d'un pool en mèche suivi d'une réintégration : les stops sont consommés</td></tr>
+<tr><td class="mono">Displacement</td><td>Bougie impulsive et volumineuse qui casse la structure et laisse un FVG</td></tr>
+<tr><td class="mono">FVG</td><td>Fair Value Gap — déséquilibre sur 3 bougies (gap entre mèches 1 et 3) qui attire le prix</td></tr>
+<tr><td class="mono">Order Block (OB)</td><td>Dernière bougie contraire avant le displacement ; empreinte des ordres institutionnels</td></tr>
+<tr><td class="mono">Mitigated</td><td>Se dit d'une zone (OB/FVG) déjà retestée — elle a livré sa liquidité, on ne la trade plus</td></tr>
+<tr><td class="mono">Premium / Discount</td><td>Moitié haute (chère) / basse (bon marché) d'une jambe de prix, séparées par le 50 %</td></tr>
+<tr><td class="mono">OTE</td><td>Optimal Trade Entry — la fenêtre 0.62–0.79 du Fibonacci, entrée idéale</td></tr>
+<tr><td class="mono">Killzone</td><td>Fenêtre horaire à forte activité institutionnelle : Londres 9h–11h30, New York 14h30–17h (Paris)</td></tr>
+<tr><td class="mono">Judas swing</td><td>Faux départ à l'ouverture d'une session, qui sert de sweep avant le vrai mouvement</td></tr>
+<tr><td class="mono">R</td><td>Unité de risque : 1R = le montant risqué sur le trade ; tout se mesure en R</td></tr>
+<tr><td class="mono">RR</td><td>Ratio risque/récompense — minimum 1:2 dans la stratégie</td></tr>
+<tr><td class="mono">Winrate</td><td>Pourcentage de trades gagnants</td></tr>
+<tr><td class="mono">Espérance</td><td>Gain moyen par trade = (WR × gain moyen) − (taux de perte × 1R) ; doit être positive</td></tr>
+<tr><td class="mono">Drawdown</td><td>Baisse depuis le plus haut du compte ; limité par des règles strictes en prop firm</td></tr>
+<tr><td class="mono">MFE / MAE</td><td>Excursion maximale favorable / défavorable d'un trade — sert à optimiser TP et SL</td></tr>
+<tr><td class="mono">MGC</td><td>Micro Gold futures — 1 contrat = 10 onces d'or ; l'un des supports possibles</td></tr>
+<tr><td class="mono">Tick</td><td>Plus petite variation de prix d'un contrat</td></tr>
+<tr><td class="mono">Ordre limite</td><td>Ordre placé à un prix meilleur que l'actuel — notre mode d'entrée (le retest vient à nous)</td></tr>
+<tr><td class="mono">Spread / Slippage</td><td>Écart achat-vente / différence entre prix demandé et obtenu — les coûts cachés</td></tr>
+<tr><td class="mono">Prop firm</td><td>Société qui finance des traders après une évaluation, contre un partage des gains</td></tr>
+<tr><td class="mono">Payout</td><td>Retrait des gains d'un compte financé — le seul gain définitif</td></tr>
+<tr><td class="mono">MSS</td><td>Market Structure Shift — CHoCH exécuté avec displacement (FVG laissé) : le retournement « signé »</td></tr>
+<tr><td class="mono">Inducement (IDM)</td><td>Pool-appât créé juste avant la vraie zone, balayé pour piéger les entrées précoces</td></tr>
+<tr><td class="mono">Resting liquidity</td><td>Liquidité dormante : tous les ordres en attente accumulés autour d'un niveau évident</td></tr>
+<tr><td class="mono">Engineered liquidity</td><td>Liquidité fabriquée : niveaux « trop parfaits » construits pour attirer des stops</td></tr>
+<tr><td class="mono">Liquidity grab</td><td>Prise de liquidité au sens large, parfois en plusieurs bougies avant réintégration</td></tr>
+<tr><td class="mono">Breaker block</td><td>Order Block invalidé en clôture qui change de polarité — retesté dans l'autre sens</td></tr>
+<tr><td class="mono">iFVG</td><td>Inversion FVG — gap traversé en clôture qui devient zone du camp opposé</td></tr>
+<tr><td class="mono">BPR</td><td>Balanced Price Range — intersection de deux FVG opposés ; zone de précision maximale</td></tr>
+<tr><td class="mono">Compression / Expansion</td><td>Contraction de volatilité qui accumule la liquidité / displacement qui la dépense</td></tr>
+<tr><td class="mono">Silver Bullet</td><td>Fenêtre horaire ICT (16h–17h Paris) : premier FVG dans le sens confirmé de la session NY</td></tr>
+<tr><td class="mono">PWH / PWL</td><td>Previous Week High / Low — les aimants hebdomadaires de la cascade multi-timeframe</td></tr>
+<tr><td class="mono">Marubozu / Pin bar / Engulfing</td><td>Bougie pleine (momentum) / bougie de rejet (sweep condensé) / avalement (mini-CHoCH)</td></tr>
+<tr><td class="mono">Draw on Liquidity (DOL)</td><td>Le pool que le marché vise actuellement — l'aimant actif de la session</td></tr>
+<tr><td class="mono">External / Internal liquidity</td><td>Liquidité au-delà des extrêmes (stops) / à l'intérieur du range (FVG, OB, équilibre)</td></tr>
+<tr><td class="mono">Liquidity void</td><td>Jambe de prix traversée quasi sans transactions — retraversée aussi vite au retour</td></tr>
+<tr><td class="mono">Repricing / Rebalancing</td><td>Re-cotation violente vers une nouvelle valeur / retour combler un déséquilibre</td></tr>
+<tr><td class="mono">PD Array</td><td>Toute zone Premium/Discount exploitable (breaker, OB, FVG…) — voir la hiérarchie du Module 6</td></tr>
+<tr><td class="mono">Power of Three (PO3 / AMD)</td><td>Accumulation → Manipulation → Distribution : le cycle d'une journée ou d'une bougie</td></tr>
+<tr><td class="mono">2022 Model / Unicorn</td><td>Noms ICT du Setup GSS Classique / du chevauchement breaker + FVG</td></tr>
+<tr><td class="mono">Trend / Range / Neutral day</td><td>Les types de journées du Module 12 — chacun impose son adaptation</td></tr>
+<tr><td class="mono">Kelly / Fixed Fractional</td><td>Modèles de sizing : optimal théorique intenable / % fixe du capital (le modèle de la formation)</td></tr>
+<tr><td class="mono">Risk of Ruin</td><td>Probabilité de perte irrécupérable — ce que le sizing à 0,75 % rend quasi nulle</td></tr>
+<tr><td class="mono">Tilt</td><td>État de dérèglement émotionnel où les règles semblent optionnelles — se quitte, ne se pilote pas</td></tr>
+<tr><td class="mono">FOMC drift / Judas de news</td><td>Faux mouvement d'anticipation avant une annonce / premier spike mensonger d'une news</td></tr>
+</table></div>
+</dialog><footer class="frisk">Avertissement : le trading comporte un risque de perte en capital. Contenu strictement éducatif — aucun conseil en investissement.</footer>
+<script>window.GSS_LEARN_SLUGS=["01-le-trading-lor-et-toi","02-lire-un-graphique","03-bougies-japonaises","04-structure-de-marche","05-la-liquidite","06-zones-institutionnelles","07-multi-timeframe","08-indicateurs","09-setup-a-plus","10-bibliotheque-de-setups","11-gestion-du-risque","12-sessions-killzones","13-journal","14-backtesting","15-psychologie","16-objectifs","17-tradingview","18-correlations","19-saisonnalite","20-execution","21-order-flow","22-prop-firm","23-etude-de-cas","24-trader-durable"];</script>
+<script src="../assets/formation.js" defer></script>
+</body>
+</html>

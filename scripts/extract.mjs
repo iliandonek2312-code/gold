@@ -7,7 +7,7 @@
 //
 // Le source est lu en LECTURE SEULE ; jamais modifié.
 // =========================================================
-import { readFileSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
@@ -247,11 +247,286 @@ function dryReport() {
   console.log("═══════════════════════════════════════════════════════════════");
 }
 
+// =========================================================
+//  GÉNÉRATION (--emit)
+// =========================================================
+const FAVICON = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A5%87%3C/text%3E%3C/svg%3E";
+
+const SHELL_CSS = `
+/* ===== Coquille site formation (ajout hors source) ===== */
+body.formation{background:var(--bg);color:var(--ink);margin:0}
+.formation .fbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:12px;background:rgba(7,6,4,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:10px 16px}
+.formation .ftoc-btn{font-family:var(--mono);font-size:13px;color:var(--gold);background:transparent;border:1px solid var(--line);border-radius:8px;padding:8px 12px;cursor:pointer;white-space:nowrap}
+.formation .fcrumb{flex:1;min-width:0;font-family:var(--mono);font-size:12.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.formation .fcrumb b{color:var(--gold)}
+.formation .fnav{display:flex;gap:6px}
+.formation .fnav a,.formation .fnav span{display:grid;place-items:center;width:38px;height:38px;border-radius:8px;border:1px solid var(--line);background:var(--panel2);color:var(--ink);text-decoration:none;font-size:15px}
+.formation .fnav span{opacity:.3;pointer-events:none}
+.formation .fprog{height:3px;background:#1A1610}
+.formation .fprog>div{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-soft));width:0;transition:width .3s}
+.formation .fmain{padding:26px 0 0}
+.formation .fmod-foot{max-width:960px;margin:10px auto 60px;padding:22px 22px 0;border-top:1px dashed var(--line);display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+.formation .done-btn.on{background:var(--green);border-color:var(--green);color:#04130E}
+.formation .fnav-pair{display:flex;gap:10px}
+.formation .fnav-link{font-family:var(--mono);font-size:13.5px;color:var(--ink);text-decoration:none;padding:12px 18px;border-radius:100px;background:var(--panel2);border:1px solid var(--line)}
+.formation .fnav-link:hover{border-color:var(--gold)}
+.formation .fnav-link[aria-disabled="true"]{opacity:.3;pointer-events:none}
+.formation footer.frisk{border-top:1px solid var(--line);padding:26px 22px;color:var(--muted);font-size:12.5px;text-align:center;max-width:960px;margin:0 auto}
+/* tiroir sommaire */
+.formation .fscrim{position:fixed;inset:0;background:rgba(0,0,0,.55);opacity:0;pointer-events:none;transition:.25s;z-index:60}
+.formation .fscrim.open{opacity:1;pointer-events:auto}
+.formation .ftoc{position:fixed;top:0;left:0;bottom:0;width:min(86vw,340px);background:var(--panel);border-right:1px solid var(--line);transform:translateX(-105%);transition:transform .3s;z-index:70;overflow-y:auto;padding:18px}
+.formation .ftoc.open{transform:none}
+.formation .ftoc-h{font-family:var(--mono);font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin:16px 0 6px}
+.formation .ftoc a{display:flex;gap:8px;padding:8px 10px;border-radius:8px;color:var(--muted);text-decoration:none;font-size:13.5px}
+.formation .ftoc a:hover{background:var(--panel2);color:var(--ink)}
+.formation .ftoc a.cur{color:var(--gold);background:var(--panel2)}
+.formation .ftoc a .n{font-family:var(--mono);color:var(--gold);flex:none}
+.formation .ftoc a.is-done .n::after{content:"✓";margin-left:4px;color:var(--green)}
+/* glossaire */
+dialog#glossaire-dlg{max-width:780px;width:92%;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:14px;padding:0}
+dialog#glossaire-dlg::backdrop{background:rgba(0,0,0,.6)}
+.gdlg-head{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 20px;border-bottom:1px solid var(--line);background:var(--panel)}
+.gdlg-head h2{margin:0;font-size:17px}
+.gdlg-body{padding:8px 20px 20px;max-height:72vh;overflow:auto}
+[data-close-glossaire]{background:transparent;border:1px solid var(--line);color:var(--muted);border-radius:8px;padding:6px 12px;cursor:pointer;font-family:var(--mono)}
+/* sommaire (index) */
+.formation .fhero{max-width:960px;margin:0 auto;padding:44px 22px 6px}
+.formation .fhero .eyebrow{margin-bottom:10px}
+.formation .fhero h1{font-size:clamp(28px,5.2vw,46px);line-height:1.05;margin:0 0 12px}
+.formation .fhero p{color:var(--muted);max-width:640px}
+.formation .fresume{display:inline-block;margin-top:16px;font-family:var(--mono);font-size:13.5px;padding:12px 22px;border-radius:100px;background:linear-gradient(135deg,var(--gold-soft),var(--gold));color:#1a1405;text-decoration:none;font-weight:700}
+.formation .fpart{max-width:960px;margin:0 auto;padding:20px 22px}
+.formation .fpart-h{font-family:var(--mono);font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--line);padding-bottom:8px;margin:14px 0}
+.formation .fmod-list{display:grid;gap:10px}
+.formation .fmod-card{display:flex;gap:14px;align-items:center;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--panel);text-decoration:none;color:var(--ink)}
+.formation .fmod-card:hover{border-color:var(--gold)}
+.formation .fmod-card .n{font-family:var(--mono);font-size:22px;color:transparent;-webkit-text-stroke:1px var(--gold);flex:none;min-width:34px}
+.formation .fmod-card .t{flex:1}
+.formation .fmod-card .t small{display:block;color:var(--muted);font-size:12px;font-family:var(--mono)}
+.formation .fmod-card.is-done{border-color:var(--green)}
+.formation .fmod-card.is-done .n{-webkit-text-stroke-color:var(--green)}
+.formation .fmod-card .chk{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.formation .fmod-card.is-done .chk{color:var(--green)}
+@media print{
+  .formation .fbar,.formation .fprog,.formation .ftoc,.formation .fscrim,.formation .fmod-foot,dialog#glossaire-dlg{display:none!important}
+  .formation .fmain{padding:0}
+  details{border:1px solid #ccc}
+}
+`;
+
+const LEARN = MODULES.filter((m) => m.part); // 24 modules d'apprentissage
+const NAV_ORDER = MODULES.filter((m) => m.id !== "m0"); // 24 + examen + glossaire
+
+function getH2(html) {
+  const m = html.match(/<h2[^>]*>([\s\S]*?)<\/h2>/i);
+  return m ? m[1].replace(/<[^>]+>/g, "").trim() : "";
+}
+function getModNum(html) {
+  const m = html.match(/<div class="mod-num">([^<]*)<\/div>/);
+  return m ? m[1].trim() : "";
+}
+// Ajoute id="schema-N" à chaque <figure> selon son libellé <b>Schéma N</b>
+function addSchemaIds(html) {
+  return html.replace(/<figure>([\s\S]*?)<\/figure>/g, (whole, inner) => {
+    const nm = inner.match(/Sch[ée]ma\s+(\d+)/);
+    return nm ? `<figure id="schema-${nm[1]}">${inner}</figure>` : whole;
+  });
+}
+// Résout les 3 renvois croisés (§3.3) vers le schéma d'origine
+function linkifyCrossRefs(html, selfSlug, homeOf) {
+  const link = (n, text) => {
+    const home = homeOf(n);
+    const href = home === selfSlug ? `#schema-${n}` : `${home}.html#schema-${n}`;
+    return `<a href="${href}">${text}</a>`;
+  };
+  return html
+    .replace("miroir du Schéma 21", "miroir du " + link(21, "Schéma 21"))
+    .replace("(Schéma 35)", "(" + link(35, "Schéma 35") + ")")
+    .replace("(Schéma 37)", "(" + link(37, "Schéma 37") + ")");
+}
+
+function head(title) {
+  return `<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${title}</title>
+<meta name="theme-color" content="#070604">
+<link rel="icon" href="${FAVICON}">
+<link rel="stylesheet" href="../assets/formation.css">
+</head>`;
+}
+
+function tocHtml(currentSlug) {
+  let out = `<nav class="ftoc" id="ftoc" aria-label="Sommaire de la formation">
+<div class="ftoc-h">Formation</div>
+<a href="index.html"${currentSlug === "index" ? ' class="cur"' : ""}><span class="n">◆</span> Accueil &amp; progression</a>`;
+  let lastPart = null;
+  for (const m of MODULES) {
+    if (m.id === "m0") continue;
+    if (m.part && m.part !== lastPart) {
+      out += `<div class="ftoc-h">${PARTS[m.part]}</div>`;
+      lastPart = m.part;
+    }
+    if (m.id === "mEx") out += `<div class="ftoc-h">Validation</div>`;
+    if (m.id === "mG") out += `<div class="ftoc-h">Référence</div>`;
+    const cur = m.slug === currentSlug ? " cur" : "";
+    const done = m.part ? ` data-mod-slug="${m.slug}"` : "";
+    out += `<a href="${m.slug}.html" class="tocitem${cur}"${done}><span class="n">${m.num || "§"}</span> ${m.slugTitle}</a>`;
+  }
+  out += `</nav>`;
+  return out;
+}
+
+function bar(breadcrumb, prev, next) {
+  const arrow = (m, sym, rel) => m
+    ? `<a href="${m.slug}.html" data-nav-${rel} aria-label="${rel === "prev" ? "Précédent" : "Suivant"}">${sym}</a>`
+    : `<span>${sym}</span>`;
+  return `<div class="fscrim" id="fscrim"></div>
+<header class="fbar">
+<button class="ftoc-btn" aria-expanded="false" aria-controls="ftoc">☰ Sommaire</button>
+<div class="fcrumb">${breadcrumb}</div>
+<div class="fnav">${arrow(prev, "◀", "prev")}${arrow(next, "▶", "next")}</div>
+</header>
+<div class="fprog"><div id="fprogfill"></div></div>`;
+}
+
+function footFrame(learnJson) {
+  return `<footer class="frisk">Avertissement : le trading comporte un risque de perte en capital. Contenu strictement éducatif — aucun conseil en investissement.</footer>
+<script>window.GSS_LEARN_SLUGS=${learnJson};</script>
+<script src="../assets/formation.js" defer></script>
+</body>
+</html>`;
+}
+
+function emit() {
+  const html = readSource();
+  const sections = sliceSections(html);
+  const byId = new Map(sections.map((s) => [s.id, s]));
+  const quizByAfter = new Map(extractQuizBlocks(html).map((q) => [q.afterId, q]));
+
+  // Titres de module (h2) + carte schéma→slug
+  const schemaHome = new Map();
+  for (const meta of MODULES) {
+    const s = byId.get(meta.id);
+    meta.slugTitle = getH2(s.inner) || meta.slug;
+    for (const n of schemasIn(s.inner)) schemaHome.set(n, meta.slug);
+  }
+  const homeOf = (n) => schemaHome.get(n);
+  const learnJson = JSON.stringify(LEARN.map((m) => m.slug));
+
+  // Glossaire (table) pour la page ET le dialog
+  const gloSection = byId.get("mG");
+  const gloTable = (gloSection.inner.match(/<table[\s\S]*?<\/table>/) || [""])[0];
+  const gloDialog = `<dialog id="glossaire-dlg">
+<div class="gdlg-head"><h2>Glossaire — 52 termes</h2><button data-close-glossaire>Fermer ✕</button></div>
+<div class="gdlg-body">${gloTable}</div>
+</dialog>`;
+
+  const outDir = join(ROOT, "formation");
+  mkdirSync(outDir, { recursive: true });
+  const written = [];
+  const idx = (slug) => NAV_ORDER.findIndex((m) => m.slug === slug);
+
+  // Pages modules + examen + glossaire
+  for (const meta of NAV_ORDER) {
+    const s = byId.get(meta.id);
+    let content = addSchemaIds(s.inner);
+    const q = quizByAfter.get(meta.id);
+    if (q) content += `\n<div class="wrap">${addSchemaIds(q.html)}</div>`;
+    content = linkifyCrossRefs(content, meta.slug, homeOf);
+
+    const i = idx(meta.slug);
+    const prev = i > 0 ? NAV_ORDER[i - 1] : null;
+    const next = i < NAV_ORDER.length - 1 ? NAV_ORDER[i + 1] : null;
+
+    let crumb;
+    if (meta.id === "mEx") crumb = `Formation › <b>Examen final</b>`;
+    else if (meta.id === "mG") crumb = `Formation › <b>Glossaire</b>`;
+    else crumb = `Formation › ${PARTS[meta.part]} › <b>Module ${meta.num}</b>`;
+
+    const isGlossary = meta.id === "mG";
+    const doneBtn = meta.part
+      ? `<button class="done-btn" data-slug="${meta.slug}" aria-pressed="false">○ MARQUER CE MODULE COMME TERMINÉ</button>`
+      : `<span></span>`;
+    const navPair =
+      `<div class="fnav-pair">` +
+      (prev ? `<a class="fnav-link prev" data-nav-prev href="${prev.slug}.html">◀ ${prev.num ? "Module " + prev.num : prev.slugTitle}</a>` : `<span class="fnav-link" aria-disabled="true">◀</span>`) +
+      (next ? `<a class="fnav-link next" data-nav-next href="${next.slug}.html">${next.num ? "Module " + next.num : next.slugTitle} ▶</a>` : `<span class="fnav-link" aria-disabled="true">▶</span>`) +
+      `</div>`;
+
+    const page =
+      head(`${meta.num ? "Module " + meta.num + " · " : ""}${meta.slugTitle} — Gold Sweep Academy`) +
+      `\n<body class="formation">\n` +
+      tocHtml(meta.slug) +
+      bar(crumb, prev, next) +
+      `<main class="fmain">\n${content}\n` +
+      `<div class="fmod-foot">${doneBtn}${navPair}</div>\n` +
+      `<div class="wrap" style="margin-bottom:40px"><button class="fnav-link" data-open-glossaire>📖 Ouvrir le glossaire</button></div>\n` +
+      `</main>\n` +
+      (isGlossary ? "" : gloDialog) +
+      footFrame(learnJson);
+
+    const file = `${meta.slug}.html`;
+    writeFileSync(join(outDir, file), page, "utf8");
+    written.push(file);
+  }
+
+  // Page d'accueil /formation/index.html (à partir de m0 + sommaire)
+  const m0 = byId.get("m0");
+  let sommaire = "";
+  let lastPart = null;
+  for (const m of NAV_ORDER) {
+    if (m.part && m.part !== lastPart) {
+      if (lastPart !== null) sommaire += `</div>`;
+      sommaire += `<div class="fpart"><div class="fpart-h">${PARTS[m.part]}</div><div class="fmod-list">`;
+      lastPart = m.part;
+    }
+    if (m.id === "mEx") { sommaire += `</div><div class="fpart"><div class="fpart-h">Validation &amp; référence</div><div class="fmod-list">`; lastPart = "END"; }
+    const isLearn = !!m.part;
+    const doneAttr = isLearn ? ` data-mod-slug="${m.slug}"` : "";
+    sommaire += `<a class="fmod-card"${doneAttr} href="${m.slug}.html"><span class="n">${m.num || "★"}</span><span class="t">${m.slugTitle}<small>${m.part ? PARTS[m.part] : (m.id === "mEx" ? "Examen final" : "Glossaire")}</small></span><span class="chk">${isLearn ? "○" : "→"}</span></a>`;
+  }
+  sommaire += `</div></div>`;
+
+  const indexPage =
+    head("Formation — Gold Sweep Academy") +
+    `\n<body class="formation">\n` +
+    tocHtml("index") +
+    `<div class="fscrim" id="fscrim"></div>
+<header class="fbar"><button class="ftoc-btn" aria-expanded="false" aria-controls="ftoc">☰ Sommaire</button><div class="fcrumb"><b>Formation</b> — Gold Sweep Scalper Academy</div><div class="fnav"><a href="01-le-trading-lor-et-toi.html" data-nav-next aria-label="Commencer">▶</a></div></header>
+<div class="fprog"><div id="fprogfill"></div></div>` +
+    `<main class="fmain">
+<section class="fhero">
+<div class="eyebrow">Formation complète</div>
+<h1>Le programme, du premier chandelier à l'autonomie</h1>
+<p id="fproglabel">24 modules, un examen final et un glossaire. Progresse à ton rythme — ta progression est mémorisée sur cet appareil.</p>
+<a class="fresume" id="fresume" href="01-le-trading-lor-et-toi.html">Reprendre où j'en étais →</a>
+</section>
+${m0.inner}
+${sommaire}
+<div class="wrap" style="margin:10px auto 60px"><button class="fnav-link" data-open-glossaire>📖 Ouvrir le glossaire</button></div>
+</main>` +
+    gloDialog +
+    footFrame(learnJson);
+  writeFileSync(join(outDir, "index.html"), indexPage, "utf8");
+  written.unshift("index.html");
+
+  // formation.css = <style> source (verbatim) + coquille
+  const css = extractCss(html) + "\n" + SHELL_CSS;
+  writeFileSync(join(ROOT, "assets", "formation.css"), css, "utf8");
+
+  console.log(`✓ Écrit ${written.length} pages dans /formation :`);
+  console.log("  " + written.join("  "));
+  console.log(`✓ assets/formation.css (${(Buffer.byteLength(css, "utf8") / 1024).toFixed(1)} Ko)`);
+  console.log(`✓ assets/formation.js (moteur : déjà présent)`);
+}
+
 if (import.meta.url === `file://${process.argv[1]}`) {
   const mode = process.argv[2] || "--dry";
   if (mode === "--dry") dryReport();
-  else {
-    console.error(`Mode "${mode}" non encore implémenté (ÉTAPE 3 : --emit).`);
-    process.exit(1);
-  }
+  else if (mode === "--emit") emit();
+  else { console.error(`Mode "${mode}" inconnu (attendu : --dry | --emit).`); process.exit(1); }
 }

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 04 · La structure de marché — Gold Sweep Academy</title>
+<meta name="theme-color" content="#070604">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A5%87%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/formation.css">
+</head>
+<body class="formation">
+<nav class="ftoc" id="ftoc" aria-label="Sommaire de la formation">
+<div class="ftoc-h">Formation</div>
+<a href="index.html"><span class="n">◆</span> Accueil &amp; progression</a><div class="ftoc-h">Partie I — Bases</div><a href="01-le-trading-lor-et-toi.html" class="tocitem" data-mod-slug="01-le-trading-lor-et-toi"><span class="n">01</span> Le trading, l'or et toi</a><a href="02-lire-un-graphique.html" class="tocitem" data-mod-slug="02-lire-un-graphique"><span class="n">02</span> Lire un graphique comme un pro</a><a href="03-bougies-japonaises.html" class="tocitem" data-mod-slug="03-bougies-japonaises"><span class="n">03</span> Bougies japonaises : lire le combat acheteurs / vendeurs</a><div class="ftoc-h">Partie II — Structure & liquidité</div><a href="04-structure-de-marche.html" class="tocitem cur" data-mod-slug="04-structure-de-marche"><span class="n">04</span> La structure de marché</a><a href="05-la-liquidite.html" class="tocitem" data-mod-slug="05-la-liquidite"><span class="n">05</span> La liquidité</a><a href="06-zones-institutionnelles.html" class="tocitem" data-mod-slug="06-zones-institutionnelles"><span class="n">06</span> Zones institutionnelles : OB, FVG, Premium/Discount</a><a href="07-multi-timeframe.html" class="tocitem" data-mod-slug="07-multi-timeframe"><span class="n">07</span> Analyse multi-timeframe : du Monthly au M1</a><div class="ftoc-h">Partie III — Confluence & exécution</div><a href="08-indicateurs.html" class="tocitem" data-mod-slug="08-indicateurs"><span class="n">08</span> Les indicateurs de confluence</a><a href="09-setup-a-plus.html" class="tocitem" data-mod-slug="09-setup-a-plus"><span class="n">09</span> Le Setup A+ : le modèle d'entrée complet</a><a href="10-bibliotheque-de-setups.html" class="tocitem" data-mod-slug="10-bibliotheque-de-setups"><span class="n">10</span> La bibliothèque de setups</a><a href="11-gestion-du-risque.html" class="tocitem" data-mod-slug="11-gestion-du-risque"><span class="n">11</span> Gestion du risque & money management</a><a href="12-sessions-killzones.html" class="tocitem" data-mod-slug="12-sessions-killzones"><span class="n">12</span> Sessions, killzones & routine quotidienne</a><div class="ftoc-h">Partie IV — Rigueur & mental</div><a href="13-journal.html" class="tocitem" data-mod-slug="13-journal"><span class="n">13</span> Journal, erreurs & plan 30 jours</a><a href="14-backtesting.html" class="tocitem" data-mod-slug="14-backtesting"><span class="n">14</span> Backtesting : valider avant de risquer</a><a href="15-psychologie.html" class="tocitem" data-mod-slug="15-psychologie"><span class="n">15</span> Psychologie du scalpeur</a><a href="16-objectifs.html" class="tocitem" data-mod-slug="16-objectifs"><span class="n">16</span> Objectifs réalistes & trajectoire</a><div class="ftoc-h">Partie V — Approfondissements</div><a href="17-tradingview.html" class="tocitem" data-mod-slug="17-tradingview"><span class="n">17</span> La boîte à outils TradingView</a><a href="18-correlations.html" class="tocitem" data-mod-slug="18-correlations"><span class="n">18</span> Les corrélations de l'or</a><a href="19-saisonnalite.html" class="tocitem" data-mod-slug="19-saisonnalite"><span class="n">19</span> Saisonnalité &amp; contexte macro de l'or</a><a href="20-execution.html" class="tocitem" data-mod-slug="20-execution"><span class="n">20</span> Exécution &amp; microstructure</a><a href="21-order-flow.html" class="tocitem" data-mod-slug="21-order-flow"><span class="n">21</span> Lecture du flux : Order Flow, DOM &amp; Footprint</a><a href="22-prop-firm.html" class="tocitem" data-mod-slug="22-prop-firm"><span class="n">22</span> Spécial prop firm : décoder les règles, passer, durer</a><a href="23-etude-de-cas.html" class="tocitem" data-mod-slug="23-etude-de-cas"><span class="n">23</span> Étude de cas : un mois de trading, documenté de A à Z</a><a href="24-trader-durable.html" class="tocitem" data-mod-slug="24-trader-durable"><span class="n">24</span> Le trader durable : hygiène de vie, sécurité &amp; cadre français</a><div class="ftoc-h">Validation</div><a href="examen.html" class="tocitem"><span class="n">25</span> Examen final</a><div class="ftoc-h">Référence</div><a href="glossaire.html" class="tocitem"><span class="n">§</span> Glossaire de l'académie</a></nav><div class="fscrim" id="fscrim"></div>
+<header class="fbar">
+<button class="ftoc-btn" aria-expanded="false" aria-controls="ftoc">☰ Sommaire</button>
+<div class="fcrumb">Formation › Partie II — Structure & liquidité › <b>Module 04</b></div>
+<div class="fnav"><a href="03-bougies-japonaises.html" data-nav-prev aria-label="Précédent">◀</a><a href="05-la-liquidite.html" data-nav-next aria-label="Suivant">▶</a></div>
+</header>
+<div class="fprog"><div id="fprogfill"></div></div><main class="fmain">
+<div class="wrap">
+<div class="mod-head"><span class="mod-num">04</span><div class="mod-head-txt"><div class="eyebrow">PARTIE II — Module 4 · Fondations</div>
+<h2>La structure de marché</h2><p class="mod-goal"><b>🎯 Objectif du module :</b> nommer la tendance en quelques secondes et distinguer une vraie cassure (BOS) d'un piège (sweep) au premier coup d'œil.</p></div></div>
+<p class="lead">La structure, c'est la grammaire du prix. Tout le reste (liquidité, zones, entrées) se lit à travers elle.</p>
+
+<h3>4.1 — Swings : HH, HL, LH, LL</h3>
+<p>Le prix ne monte jamais en ligne droite : il fait des vagues. Chaque sommet et creux se nomme par rapport au précédent :</p>
+<div class="grid2">
+<div class="card buy"><h4>Tendance haussière</h4><p><b>HH</b> (Higher High) : sommet plus haut que le précédent.<br><b>HL</b> (Higher Low) : creux plus haut que le précédent.<br>Tant que le prix enchaîne HH + HL → on ne cherche que des <b>achats</b>.</p></div>
+<div class="card sell"><h4>Tendance baissière</h4><p><b>LL</b> (Lower Low) : creux plus bas que le précédent.<br><b>LH</b> (Lower High) : sommet plus bas que le précédent.<br>Tant que le prix enchaîne LL + LH → on ne cherche que des <b>ventes</b>.</p></div>
+</div>
+<figure id="schema-8">
+<svg viewBox="0 0 680 270">
+  <text class="ann g" x="60" y="30" font-weight="600">TENDANCE HAUSSIÈRE</text>
+  <path class="path-g" d="M40 210 L110 120 L150 165 L220 75 L260 128 L330 40"/>
+  <circle cx="110" cy="120" r="5" fill="#2BA88A"/><text class="ann g" x="92" y="105">HH</text>
+  <circle cx="150" cy="165" r="5" fill="#2BA88A"/><text class="ann g" x="158" y="182">HL</text>
+  <circle cx="220" cy="75" r="5" fill="#2BA88A"/><text class="ann g" x="202" y="60">HH</text>
+  <circle cx="260" cy="128" r="5" fill="#2BA88A"/><text class="ann g" x="268" y="146">HL</text>
+  <text class="ann" x="40" y="250">chaque creux plus haut → on achète les replis</text>
+  <line x1="352" y1="20" x2="352" y2="250" stroke="#2E2614"/>
+  <text class="ann r" x="400" y="30" font-weight="600">TENDANCE BAISSIÈRE</text>
+  <path class="path-r" d="M380 55 L450 145 L492 100 L562 185 L602 142 L666 230"/>
+  <circle cx="450" cy="145" r="5" fill="#E05252"/><text class="ann r" x="432" y="168">LL</text>
+  <circle cx="492" cy="100" r="5" fill="#E05252"/><text class="ann r" x="500" y="92">LH</text>
+  <circle cx="562" cy="185" r="5" fill="#E05252"/><text class="ann r" x="544" y="208">LL</text>
+  <circle cx="602" cy="142" r="5" fill="#E05252"/><text class="ann r" x="610" y="134">LH</text>
+  <text class="ann" x="392" y="250">chaque sommet plus bas → on vend les rebonds</text>
+</svg>
+<figcaption><b>Schéma 8</b> — La lecture de base : relier les swings. Le sens des creux et des sommets EST la tendance — aucun indicateur nécessaire.</figcaption>
+</figure>
+
+<h3>4.2 — BOS : Break of Structure (continuation)</h3>
+<p>Un <strong>BOS</strong> = le prix casse le dernier sommet (en tendance haussière) ou le dernier creux (en tendance baissière) <em>dans le sens de la tendance</em>. C'est une confirmation de continuation : la tendance est en bonne santé.</p>
+
+<figure id="schema-9">
+<svg viewBox="0 0 640 300">
+  <!-- uptrend candles -->
+  <line class="wick g" x1="60" y1="250" x2="60" y2="200"/><rect class="cu" x="53" y="210" width="14" height="35" rx="2"/>
+  <line class="wick g" x1="90" y1="215" x2="90" y2="165"/><rect class="cu" x="83" y="172" width="14" height="38" rx="2"/>
+  <line class="wick r" x1="120" y1="170" x2="120" y2="215"/><rect class="cd" x="113" y="175" width="14" height="30" rx="2"/>
+  <line class="wick r" x1="150" y1="195" x2="150" y2="235"/><rect class="cd" x="143" y="200" width="14" height="28" rx="2"/>
+  <line class="wick g" x1="180" y1="232" x2="180" y2="175"/><rect class="cu" x="173" y="182" width="14" height="45" rx="2"/>
+  <line class="wick g" x1="210" y1="180" x2="210" y2="120"/><rect class="cu" x="203" y="128" width="14" height="48" rx="2"/>
+  <line class="wick g" x1="240" y1="128" x2="240" y2="95"/><rect class="cu" x="233" y="102" width="14" height="24" rx="2"/>
+  <line class="wick r" x1="270" y1="100" x2="270" y2="150"/><rect class="cd" x="263" y="105" width="14" height="38" rx="2"/>
+  <line class="wick r" x1="300" y1="140" x2="300" y2="185"/><rect class="cd" x="293" y="145" width="14" height="32" rx="2"/>
+  <line class="wick g" x1="330" y1="182" x2="330" y2="130"/><rect class="cu" x="323" y="138" width="14" height="42" rx="2"/>
+  <line class="wick g" x1="360" y1="135" x2="360" y2="70"/><rect class="cu" x="353" y="78" width="14" height="55" rx="2"/>
+  <line class="wick g" x1="390" y1="75" x2="390" y2="45"/><rect class="cu" x="383" y="52" width="14" height="22" rx="2"/>
+  <!-- levels -->
+  <line class="lvl" x1="40" y1="95" x2="420" y2="95"/>
+  <text class="ann" x="430" y="99">Ancien HH</text>
+  <line class="lvl" x1="130" y1="228" x2="230" y2="228"/>
+  <text class="ann g" x="150" y="248">HL</text>
+  <line class="lvl" x1="280" y1="180" x2="360" y2="180"/>
+  <text class="ann g" x="300" y="205">HL plus haut</text>
+  <!-- BOS marker -->
+  <circle cx="378" cy="95" r="5" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  <text class="ann o" x="398" y="30" font-weight="600">BOS ✓ cassure du HH</text>
+  <path class="arrow" d="M470 55 Q 500 30 530 20" marker-end="url(#ah)"/>
+  <defs><marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#D4AF37"/></marker></defs>
+  <text class="ann" x="452" y="130">→ tendance confirmée,</text>
+  <text class="ann" x="452" y="150">on cherche des achats</text>
+</svg>
+<figcaption><b>Schéma 9</b> — BOS haussier : le prix casse l'ancien HH en clôture → continuation. La zone entre les HL devient le terrain de chasse pour les entrées.</figcaption>
+</figure>
+
+<div class="rule"><div class="t">Règle de validation</div><p>Un BOS / CHoCH n'est valide qu'en <strong>clôture de bougie</strong> au-delà du niveau. Une simple mèche qui dépasse = c'est un sweep de liquidité, pas une cassure (voir Module 5 — c'est une distinction capitale).</p></div>
+<div class="fig2">
+<figure id="schema-10">
+<svg viewBox="0 0 330 240">
+  <line class="lvl" x1="20" y1="110" x2="310" y2="110"/>
+  <text class="ann" x="24" y="100">ancien sommet</text>
+  <line class="wick g" x1="120" y1="190" x2="120" y2="140"/><rect class="cu" x="112" y="148" width="16" height="40" rx="2"/>
+  <line class="wick g" x1="160" y1="145" x2="160" y2="60"/><rect class="cu" x="152" y="68" width="16" height="72" rx="2"/>
+  <line class="wick g" x1="200" y1="66" x2="200" y2="35"/><rect class="cu" x="192" y="42" width="16" height="26" rx="2"/>
+  <circle cx="160" cy="110" r="6" fill="none" stroke="#2BA88A" stroke-width="2.5"/>
+  <text class="ann g" x="55" y="222" font-weight="600">✓ BOS : le CORPS clôture au-dessus</text>
+</svg>
+<figcaption><b>Schéma 10</b> — Cassure valide (continuation)</figcaption>
+</figure>
+<figure id="schema-11">
+<svg viewBox="0 0 330 240">
+  <line class="lvl" x1="20" y1="110" x2="310" y2="110"/>
+  <text class="ann" x="24" y="100">ancien sommet</text>
+  <line class="wick g" x1="120" y1="190" x2="120" y2="140"/><rect class="cu" x="112" y="148" width="16" height="40" rx="2"/>
+  <line class="wick r" x1="160" y1="70" x2="160" y2="180"/><rect class="cd" x="152" y="125" width="16" height="50" rx="2"/>
+  <line class="wick r" x1="200" y1="170" x2="200" y2="215"/><rect class="cd" x="192" y="174" width="16" height="36" rx="2"/>
+  <circle cx="160" cy="80" r="6" fill="none" stroke="#D4AF37" stroke-width="2.5"/>
+  <text class="ann o" x="40" y="222" font-weight="600">✗ SWEEP : seule la MÈCHE dépasse</text>
+</svg>
+<figcaption><b>Schéma 11</b> — Fausse cassure = liquidité prise</figcaption>
+</figure>
+</div>
+
+<figure id="schema-12">
+<svg viewBox="0 0 680 300">
+  <text class="ann g" x="40" y="24" font-weight="600">Lecture d'un BOS haussier, bougie par bougie</text>
+  <line class="lvl" x1="40" y1="170" x2="640" y2="170"/>
+  <text class="ann" x="560" y="164" fill="#8C8C8C">dernier HH</text>
+  <line class="wick" x1="60" y1="190" x2="60" y2="222"/><rect class="cd" x="54" y="200" width="13" height="15"/><line class="wick" x1="80" y1="198" x2="80" y2="220"/><rect class="cu" x="74" y="205" width="13" height="10"/><line class="wick" x1="100" y1="185" x2="100" y2="208"/><rect class="cu" x="94" y="190" width="13" height="15"/><line class="wick" x1="120" y1="170" x2="120" y2="195"/><rect class="cu" x="114" y="175" width="13" height="15"/><line class="wick" x1="140" y1="168" x2="140" y2="188"/><rect class="cd" x="134" y="175" width="13" height="7"/><line class="wick" x1="160" y1="155" x2="160" y2="186"/><rect class="cu" x="154" y="160" width="13" height="22"/><line class="wick" x1="180" y1="142" x2="180" y2="164"/><rect class="cu" x="174" y="148" width="13" height="12"/><line class="wick" x1="200" y1="143" x2="200" y2="160"/><rect class="cd" x="194" y="148" width="13" height="7"/><line class="wick" x1="220" y1="134" x2="220" y2="159"/><rect class="cu" x="214" y="140" width="13" height="15"/><line class="wick" x1="240" y1="128" x2="240" y2="145"/><rect class="cu" x="234" y="132" width="13" height="8"/><line class="wick" x1="260" y1="115" x2="260" y2="136"/><rect class="cu" x="254" y="120" width="13" height="12"/>
+  <circle cx="120" cy="195" r="5" fill="#2BA88A"/><text class="ann g" x="102" y="215">HL</text>
+  <path class="arrow" d="M175 200 Q 185 175 195 158"/>
+  <text class="ann o" x="150" y="235">displacement : grande bougie, peu de mèche</text>
+  <circle cx="220" cy="140" r="6" fill="none" stroke="#D4AF37" stroke-width="2.5"/>
+  <text class="ann o" x="228" y="130">clôture AU-DESSUS du HH = BOS</text>
+  <text class="ann g" x="40" y="285">Séquence : repli (HL) → bougie de force qui clôture au-delà du dernier sommet → structure cassée à la hausse.</text>
+</svg>
+<figcaption><b>Schéma 12</b> — Le BOS n'est validé qu'à la CLÔTURE au-delà du dernier HH, portée par un displacement (grande bougie de conviction). Une simple mèche qui dépasse ne suffit pas.</figcaption>
+</figure>
+
+<h3>4.3 — CHoCH : Change of Character (retournement)</h3>
+<p>Le BOS confirme que la tendance continue. Le <b>CHoCH</b> (Change of Character, « changement de caractère ») annonce l'inverse : c'est le premier signe crédible qu'elle pourrait s'inverser.</p>
+<p>La définition est mécanique. En tendance haussière, le marché tient parce que chaque creux est plus haut que le précédent. Le jour où le prix <b>clôture sous le dernier creux (HL)</b>, ce qui tenait la tendance vient de céder : le caractère du marché a changé. En tendance baissière, c'est le miroir exact — une clôture au-dessus du dernier sommet (LH).</p>
+<p>Attention à la nuance qui sauve des comptes : un CHoCH est une <b>alerte</b>, pas un signal d'entrée. Il dit « la tendance est peut-être finie », pas « entre maintenant ». C'est le MSS de la section 4.5, avec sa preuve de force, qui autorise l'action.</p>
+<p>Le <strong>CHoCH</strong> est la première cassure de structure <em>contre</em> la tendance en cours. En tendance haussière, c'est la cassure du dernier HL. Il signale que le smart money a probablement changé de camp. <strong>C'est le déclencheur principal de la stratégie en M1.</strong></p>
+
+<figure id="schema-13">
+<svg viewBox="0 0 640 300">
+  <!-- uptrend then reversal -->
+  <line class="wick g" x1="60" y1="240" x2="60" y2="190"/><rect class="cu" x="53" y="198" width="14" height="38" rx="2"/>
+  <line class="wick g" x1="90" y1="195" x2="90" y2="140"/><rect class="cu" x="83" y="148" width="14" height="44" rx="2"/>
+  <line class="wick r" x1="120" y1="145" x2="120" y2="190"/><rect class="cd" x="113" y="150" width="14" height="32" rx="2"/>
+  <line class="wick g" x1="150" y1="186" x2="150" y2="130"/><rect class="cu" x="143" y="138" width="14" height="44" rx="2"/>
+  <line class="wick g" x1="180" y1="135" x2="180" y2="80"/><rect class="cu" x="173" y="88" width="14" height="44" rx="2"/>
+  <!-- final push with long wick = sweep -->
+  <line class="wick r" x1="210" y1="55" x2="210" y2="125"/><rect class="cd" x="203" y="95" width="14" height="28" rx="2"/>
+  <line class="wick r" x1="240" y1="115" x2="240" y2="170"/><rect class="cd" x="233" y="118" width="14" height="45" rx="2"/>
+  <line class="wick g" x1="270" y1="168" x2="270" y2="130"/><rect class="cu" x="263" y="136" width="14" height="28" rx="2"/>
+  <line class="wick r" x1="300" y1="140" x2="300" y2="200"/><rect class="cd" x="293" y="144" width="14" height="50" rx="2"/>
+  <line class="wick r" x1="330" y1="195" x2="330" y2="245"/><rect class="cd" x="323" y="198" width="14" height="42" rx="2"/>
+  <!-- levels -->
+  <line class="lvl" x1="100" y1="182" x2="320" y2="182"/>
+  <text class="ann g" x="70" y="178">dernier HL</text>
+  <line class="lvl" x1="160" y1="58" x2="260" y2="58"/>
+  <text class="ann" x="270" y="52">sommet (mèche = sweep)</text>
+  <circle cx="300" cy="182" r="5" fill="none" stroke="#E05252" stroke-width="2"/>
+  <text class="ann r" x="345" y="175" font-weight="600">CHoCH ✗</text>
+  <text class="ann" x="345" y="196">clôture sous le HL</text>
+  <text class="ann" x="345" y="216">= retournement probable</text>
+  <path class="path-r" d="M340 240 Q 380 255 430 268"/>
+  <text class="ann r" x="440" y="275">biais vendeur</text>
+</svg>
+<figcaption><b>Schéma 13</b> — CHoCH baissier : après un dernier sommet en mèche (sweep), le prix clôture sous le dernier HL → le caractère du marché a changé.</figcaption>
+</figure>
+
+<h3>4.4 — Structure interne vs externe</h3>
+<p>Chaque unité de temps a sa propre structure. La structure <strong>M15</strong> (externe) donne la direction générale ; la structure <strong>M1</strong> (interne) donne le timing. Le cœur de la stratégie : <strong>utiliser un CHoCH M1 à l'intérieur d'une zone M5/M15, dans le sens du biais M15.</strong></p>
+<table>
+<tr><th>Unité</th><th>Rôle</th><th>Ce qu'on y lit</th></tr>
+<tr><td class="mono">M15</td><td>Biais directionnel</td><td>Tendance (BOS en série), zones majeures, liquidité du jour</td></tr>
+<tr><td class="mono">M5</td><td>Cartographie</td><td>Order blocks, FVG, pools de liquidité précis</td></tr>
+<tr><td class="mono">M1</td><td>Exécution</td><td>Sweep, CHoCH, entrée, stop loss</td></tr>
+</table>
+<figure id="schema-14">
+<svg viewBox="0 0 680 300">
+  <path d="M50 260 Q 200 250 300 170 Q 420 80 630 45" stroke="rgba(38,166,154,.22)" stroke-width="26" fill="none" stroke-linecap="round"/>
+  <text class="ann g" x="430" y="125">structure EXTERNE — la jambe M15</text>
+  <path class="path-g" d="M50 262 L95 225 L120 245 L170 205 L195 232 L250 185 L275 208 L300 168"/>
+  <path class="path-r" d="M300 168 L322 195 L345 178 L372 212"/>
+  <path class="path-g" d="M372 212 L430 140 L455 165 L510 95 L535 120 L590 60 L630 42"/>
+  <circle cx="372" cy="212" r="6" fill="none" stroke="#D4AF37" stroke-width="2.5"/>
+  <text class="ann o" x="310" y="248">pullback M1 (structure interne baissière)</text>
+  <text class="ann o" x="310" y="268">→ son CHoCH haussier = fin du repli, on rejoint la M15</text>
+  <text class="ann" x="60" y="40">Les vagues M1 vivent À L'INTÉRIEUR de la vague M15.</text>
+  <text class="ann" x="60" y="60">On trade le retournement M1 dans le SENS de la M15.</text>
+</svg>
+<figcaption><b>Schéma 14</b> — Structure interne vs externe : le repli M1 contre-tendance est l'opportunité, son CHoCH est le déclencheur.</figcaption>
+</figure>
+
+<div class="ex"><div class="t">Exemple chiffré — lecture de structure sur l'or</div>
+<p>En M15, l'or enchaîne : creux <code>3 318</code> → sommet <code>3 331</code> → creux <code>3 324</code> (HL) → sommet <code>3 340</code> (HH avec BOS, clôture au-dessus de 3 331) → repli en cours vers <code>3 332</code>.</p>
+<p><b>Lecture :</b> biais haussier confirmé (HL + BOS en série). Le repli n'est pas un danger, c'est la zone de travail : on descend en M5/M1 chercher la liquidité sous 3 332 et la zone (OB/FVG) susceptible d'accueillir le prix. Tant que <code>3 324</code> tient en clôture M15, tout déclencheur M1 haussier est tradable.</p></div>
+
+
+<figure id="schema-15">
+<svg viewBox="0 0 680 310">
+  <text class="ann" x="40" y="24" fill="#FFFFFF" font-weight="600">Anatomie d'un CHoCH : quand la tendance change de caractère</text>
+  <line class="lvl" x1="40" y1="166" x2="640" y2="166"/>
+  <text class="ann g" x="545" y="160">dernier HL haussier</text>
+  <line class="wick" x1="60" y1="116" x2="60" y2="138"/><rect class="cd" x="54" y="120" width="13" height="12"/><line class="wick" x1="82" y1="128" x2="82" y2="150"/><rect class="cd" x="76" y="132" width="13" height="13"/><line class="wick" x1="104" y1="135" x2="104" y2="152"/><rect class="cu" x="98" y="140" width="13" height="5"/><line class="wick" x1="126" y1="136" x2="126" y2="157"/><rect class="cd" x="120" y="140" width="13" height="12"/><line class="wick" x1="148" y1="142" x2="148" y2="160"/><rect class="cu" x="142" y="148" width="13" height="4"/><line class="wick" x1="170" y1="144" x2="170" y2="166"/><rect class="cd" x="164" y="148" width="13" height="14"/><line class="wick" x1="192" y1="158" x2="192" y2="180"/><rect class="cd" x="186" y="162" width="13" height="13"/><line class="wick" x1="214" y1="162" x2="214" y2="182"/><rect class="cu" x="208" y="168" width="13" height="7"/><line class="wick" x1="236" y1="164" x2="236" y2="186"/><rect class="cd" x="230" y="168" width="13" height="12"/><line class="wick" x1="258" y1="176" x2="258" y2="198"/><rect class="cd" x="252" y="180" width="13" height="12"/>
+  <circle cx="126" cy="136" r="5" fill="#2BA88A"/><text class="ann g" x="108" y="128">HH</text>
+  <circle cx="192" cy="180" r="7" fill="none" stroke="#F06060" stroke-width="2.5"/>
+  <text class="ann r" x="200" y="178">clôture SOUS le dernier HL = CHoCH</text>
+  <path class="arrow" d="M60 250 L200 250" stroke="#2BA88A"/>
+  <text class="ann g" x="70" y="242">tendance haussière</text>
+  <path class="arrow" d="M210 270 L340 270" stroke="#F06060"/>
+  <text class="ann r" x="220" y="262">bascule baissière</text>
+  <text class="ann" x="40" y="298" fill="#D9D9D9">Le premier signe de retournement : le prix casse le creux qui « tenait » la tendance. Le caractère du marché a changé.</text>
+</svg>
+<figcaption><b>Schéma 15</b> — Le CHoCH marque la bascule : en tendance haussière, la première clôture SOUS le dernier HL signale que l'intention a changé. C'est le signal d'alerte de retournement (à confirmer par un MSS).</figcaption>
+</figure>
+
+<h3>4.5 — MSS : Market Structure Shift (le CHoCH avec preuve)</h3>
+<div class="notion"><div class="notion-h"><b>Market Structure Shift (MSS)</b><span>retournement confirmé</span></div><dl>
+<dt>Définition</dt><dd>Un CHoCH exécuté avec <b>displacement</b> : la cassure du swing contraire se fait par une bougie impulsive qui laisse un FVG derrière elle. Tous les MSS sont des CHoCH ; tous les CHoCH ne sont pas des MSS.</dd>
+<dt>Pourquoi ça existe</dt><dd>Un retournement institutionnel exige des ordres énormes exécutés vite : cette agressivité laisse forcément une trace (grande bougie + déséquilibre). Un CHoCH mou peut n'être qu'une fluctuation ; un MSS est une signature.</dd>
+<dt>Usage institutionnel</dt><dd>C'est le moment où les algos basculent officiellement de programme (accumulation → distribution ou l'inverse). Le FVG laissé par le MSS devient leur zone de re-chargement.</dd>
+<dt>Identification</dt><dd>① sweep préalable ② clôture au-delà du swing contraire ③ corps ≥ ~1,1 × ATR ④ FVG visible sur les 3 bougies. Les points ③④ font la différence CHoCH → MSS.</dd>
+<dt>Erreurs fréquentes</dt><dd>Trader tout CHoCH comme un MSS ; valider en mèche ; ignorer que sans sweep préalable, une cassure contraire est souvent un simple pullback profond.</dd>
+</dl></div>
+
+<h3>4.6 — Continuation vs Reversal : les deux seuls scénarios</h3>
+<p>Une fois la structure lue, il n'existe que <b>deux scénarios possibles</b> sur le marché — et savoir dans lequel tu te trouves détermine tout le reste de ton analyse.</p>
+<p>Soit la tendance <b>continue</b> : le prix fait une pause, revient chercher une zone laissée derrière lui, y trouve des acheteurs (ou des vendeurs) et repart dans le même sens en cassant la structure (BOS). Soit elle <b>se retourne</b> : le prix va d'abord chercher la liquidité au-delà d'un extrême (le sweep), puis casse la structure dans le sens opposé avec force (MSS).</p>
+<p>Toute la méthode GSS tient dans cette bifurcation. Il n'y a pas de troisième cas, et il n'y a pas de « je sens que ça va monter ». Tu observes lequel des deux se dessine, et tu attends sa confirmation.</p>
+<figure id="schema-16">
+<svg viewBox="0 0 680 300">
+  <text class="ann g" x="55" y="28" font-weight="600">CONTINUATION (BOS après pullback)</text>
+  <path class="path-g" d="M40 250 L100 170 L135 205 L200 110"/>
+  <path class="path-r" d="M200 110 L225 145 L245 128 L268 160"/>
+  <path class="path-g" d="M268 160 L330 60"/>
+  <line class="lvl" x1="170" y1="110" x2="330" y2="110"/>
+  <circle cx="305" cy="110" r="5" fill="none" stroke="#35C79C" stroke-width="2"/>
+  <text class="ann g" x="230" y="90">BOS ✓</text>
+  <text class="ann" x="60" y="278">pullback en discount → repart casser le HH</text>
+  <line x1="352" y1="20" x2="352" y2="280" stroke="#2E2614"/>
+  <text class="ann r" x="415" y="28" font-weight="600">REVERSAL (sweep + MSS)</text>
+  <path class="path-g" d="M380 250 L440 160 L470 195 L530 95"/>
+  <line class="wick r" x1="552" y1="60" x2="552" y2="130"/><rect class="cd" x="545" y="98" width="14" height="28" rx="2"/>
+  <path class="path-r" d="M560 110 L595 200 L620 180 L655 265"/>
+  <line class="lvl" x1="440" y1="196" x2="610" y2="196"/>
+  <circle cx="590" cy="196" r="5" fill="none" stroke="#F06060" stroke-width="2"/>
+  <text class="ann r" x="600" y="160">MSS ✗</text>
+  <text class="ann o" x="500" y="48">sweep du HH</text>
+  <text class="ann" x="400" y="278">mèche au sommet → cassure du HL en clôture</text>
+</svg>
+<figcaption><b>Schéma 16</b> — Toute la lecture tient là : soit le pullback trouve une zone et la tendance continue (BOS), soit un sweep précède un MSS et elle se retourne. Ton biais du jour = savoir lequel des deux tu attends.</figcaption>
+</figure>
+
+<figure id="schema-17">
+<svg viewBox="0 0 680 300">
+  <text class="ann r" x="40" y="24" font-weight="600">Le faux BOS : mèche au-dessus, mais pas de clôture</text>
+  <line class="lvl" x1="40" y1="132" x2="640" y2="132"/>
+  <text class="ann" x="540" y="126" fill="#8C8C8C">HH précédent</text>
+  <line class="wick" x1="70" y1="162" x2="70" y2="184"/><rect class="cu" x="64" y="168" width="13" height="12"/><line class="wick" x1="95" y1="152" x2="95" y2="172"/><rect class="cu" x="89" y="158" width="13" height="10"/><line class="wick" x1="120" y1="145" x2="120" y2="162"/><rect class="cu" x="114" y="150" width="13" height="8"/><line class="wick" x1="150" y1="132" x2="150" y2="154"/><rect class="cu" x="144" y="138" width="13" height="12"/><line class="wick" x1="175" y1="120" x2="175" y2="150"/><rect class="cd" x="169" y="138" width="13" height="7"/><line class="wick" x1="200" y1="140" x2="200" y2="162"/><rect class="cd" x="194" y="145" width="13" height="13"/><line class="wick" x1="225" y1="154" x2="225" y2="176"/><rect class="cd" x="219" y="158" width="13" height="12"/><line class="wick" x1="250" y1="166" x2="250" y2="188"/><rect class="cd" x="244" y="170" width="13" height="12"/>
+  <circle cx="175" cy="120" r="7" fill="none" stroke="#F06060" stroke-width="2.5"/>
+  <text class="ann r" x="185" y="112">la mèche perce... la clôture NON</text>
+  <path class="arrow" d="M250 175 Q 300 160 340 150" stroke="#F06060"/>
+  <text class="ann r" x="345" y="150">rejet immédiat = liquidité prise</text>
+  <text class="ann" x="40" y="285" fill="#D9D9D9">La mèche au-dessus du HH a juste collecté les buy stops. Sans clôture franche : ce n'est PAS un BOS, c'est un sweep.</text>
+</svg>
+<figcaption><b>Schéma 17</b> — Analyse d'un faux BOS : la bougie perce le HH en mèche mais referme dessous. Aucune cassure — juste une prise de liquidité. La règle « clôture obligatoire » évite ce piège classique.</figcaption>
+</figure>
+
+<h3>4.7 — Compression & Expansion : la respiration du marché</h3>
+<div class="grid2">
+<div class="card gold"><h4>Compression</h4><p>Bougies de plus en plus petites, swings emboîtés, souvent contre une zone ou vers un pool : le marché <b>accumule de la liquidité des deux côtés</b>. Plus la compression dure, plus les stops s'empilent — plus l'explosion sera violente. Signal : ne PAS trader dedans, préparer la carte.</p></div>
+<div class="card gold"><h4>Expansion</h4><p>Le displacement qui suit : grandes bougies, FVG en série, structure cassée. C'est la phase où l'on est censé être DÉJÀ positionné (entré sur le sweep qui a lancé l'expansion) — courir après une expansion, c'est acheter le premium.</p></div>
+</div>
+<figure id="schema-18">
+<svg viewBox="0 0 680 280">
+  <path class="path-g" d="M50 200 L90 140 L120 185 L155 150 L185 178 L215 158 L240 172 L262 162 L280 170"/>
+  <line class="liq" x1="80" y1="135" x2="300" y2="135"/>
+  <line class="liq" x1="110" y1="190" x2="300" y2="190"/>
+  <text class="ann o" x="70" y="120">buy stops ↑</text>
+  <text class="ann o" x="70" y="215">sell stops ↓</text>
+  <text class="ann" x="120" y="250" font-weight="600" fill="#FFFFFF">COMPRESSION</text>
+  <line class="wick g" x1="300" y1="145" x2="300" y2="205"/><rect class="cu" x="293" y="152" width="14" height="40" rx="2"/>
+  <circle cx="300" cy="200" r="6" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  <text class="ann o" x="255" y="235" font-weight="600">sweep du bas</text>
+  <path class="path-g" d="M310 160 L370 90 L400 110 L470 45 L520 65 L600 25"/>
+  <text class="ann g" x="430" y="130" font-weight="600">EXPANSION</text>
+  <text class="ann g" x="430" y="150">(displacement + FVG en série)</text>
+</svg>
+<figcaption><b>Schéma 18</b> — Cycle compression → sweep → expansion : le range comprime la liquidité, le sweep la récolte, l'expansion la dépense. La session Asie est la compression, Londres/NY sont l'expansion.</figcaption>
+</figure>
+
+<h3>4.8 — Exercices d'identification</h3>
+<div class="exo"><div class="t">Exercice 1</div>
+<p>Tendance haussière M15 : HL à 3 328, HH à 3 341. Le prix casse 3 328 en clôture avec une bougie moyenne, sans mèche préalable au-dessus de 3 341, et sans FVG. CHoCH, MSS, ou autre chose ?</p>
+<details><summary>Voir la réponse détaillée</summary><div>Techniquement c'est un <b>CHoCH</b> (cassure du HL en clôture)… mais un CHoCH de <b>faible qualité</b> : pas de sweep préalable du HH (aucune liquidité récoltée pour financer un retournement) et pas de displacement (pas de FVG). Deux scénarios restent ouverts : simple pullback profond qui va chercher la liquidité sous 3 328 avant de repartir, ou début de vrai retournement. Décision : pas de short ici — on attend soit un sweep sous 3 328 suivi d'un retour haussier (continuation), soit un pullback en premium avec MSS confirmé pour vendre.</div></details></div>
+<div class="exo"><div class="t">Exercice 2</div>
+<p>Depuis 45 minutes, le M1 imprime des bougies de plus en plus petites collées sous les equal highs de la matinée. Il est 14h25. Décris les 10 prochaines minutes les plus probables et ton plan.</p>
+<details><summary>Voir la réponse détaillée</summary><div>C'est une <b>compression sous un pool de buy-side</b>, cinq minutes avant l'open New York : configuration d'école pour un <b>Judas swing</b>. Scénario probable : à 14h30, expansion vers le haut qui sweep les EQH (les buy stops + les breakouters), puis retournement. Plan : AUCUN trade dans la compression ; je pose l'alerte sur les EQH ; si sweep en mèche + MSS baissier M1 → setup short avec SL au-dessus de la mèche, TP sur la liquidité basse du range. Si au contraire la cassure est en clôtures franches avec FVG → c'est une vraie expansion haussière, je chercherai le retest du FVG.</div></details></div>
+
+<div class="plan"><div class="t">Plan d'action — Module 4</div>
+<ol>
+<li><b>Exercice 1 :</b> ouvre 10 journées d'historique gold en M15 et trace tous les swings (HH/HL/LH/LL) — sans aucun indicateur. Objectif : nommer la tendance en moins de 10 secondes.</li>
+<li><b>Exercice 2 :</b> repère 10 cassures de niveau et classe-les : BOS valide (clôture) ou sweep (mèche). Note ce que fait le prix dans les 10 bougies suivantes pour chaque cas.</li>
+<li><b>Exercice 3 :</b> sur une jambe M15 haussière, zoome en M1 et identifie 3 pullbacks internes avec leur CHoCH de reprise — c'est exactement le point d'entrée de la stratégie.</li>
+<li><b>Critère de passage :</b> tu passes au Module 5 quand tu distingues BOS et sweep sans hésiter, 9 fois sur 10.</li>
+</ol></div>
+<div class="ex"><div class="t">Exemple illustré — le BOS qui n'en était pas un</div>
+<p>Le prix « casse » le dernier HH à 3 344,0… d'exactement 1 tick, en mèche, puis referme à 3 343,2. Deux lectures : le débutant voit un BOS et achète la continuation ; l'élève GSS voit une mèche SANS clôture au-delà ni displacement — donc pas de cassure du tout, juste la collecte des buy stops posés au-dessus du HH. La bougie suivante chute de 2,1 $. Règle mécanique rappelée : une structure ne casse qu'en CLÔTURE avec conviction — tout le reste est une transaction de liquidité déguisée en signal.</p></div>
+</div>
+<div class="fmod-foot"><button class="done-btn" data-slug="04-structure-de-marche" aria-pressed="false">○ MARQUER CE MODULE COMME TERMINÉ</button><div class="fnav-pair"><a class="fnav-link prev" data-nav-prev href="03-bougies-japonaises.html">◀ Module 03</a><a class="fnav-link next" data-nav-next href="05-la-liquidite.html">Module 05 ▶</a></div></div>
+<div class="wrap" style="margin-bottom:40px"><button class="fnav-link" data-open-glossaire>📖 Ouvrir le glossaire</button></div>
+</main>
+<dialog id="glossaire-dlg">
+<div class="gdlg-head"><h2>Glossaire — 52 termes</h2><button data-close-glossaire>Fermer ✕</button></div>
+<div class="gdlg-body"><table>
+<tr><th>Terme</th><th>Définition</th></tr>
+<tr><td class="mono">BOS</td><td>Break of Structure — cassure en clôture dans le sens de la tendance (continuation)</td></tr>
+<tr><td class="mono">CHoCH</td><td>Change of Character — première cassure en clôture contre la tendance (retournement) ; notre déclencheur</td></tr>
+<tr><td class="mono">HH / HL / LH / LL</td><td>Higher High / Higher Low / Lower High / Lower Low — les swings qui définissent la tendance</td></tr>
+<tr><td class="mono">Liquidité</td><td>Concentration de stops et d'ordres en attente ; le carburant que le prix va chercher</td></tr>
+<tr><td class="mono">BSL / SSL</td><td>Buy-side (au-dessus des sommets) / Sell-side liquidity (sous les creux)</td></tr>
+<tr><td class="mono">EQH / EQL</td><td>Equal Highs / Equal Lows — sommets ou creux égaux où les stops s'empilent</td></tr>
+<tr><td class="mono">PDH / PDL</td><td>Previous Day High / Low — extrêmes de la veille, pools majeurs</td></tr>
+<tr><td class="mono">Sweep / Stop hunt</td><td>Dépassement d'un pool en mèche suivi d'une réintégration : les stops sont consommés</td></tr>
+<tr><td class="mono">Displacement</td><td>Bougie impulsive et volumineuse qui casse la structure et laisse un FVG</td></tr>
+<tr><td class="mono">FVG</td><td>Fair Value Gap — déséquilibre sur 3 bougies (gap entre mèches 1 et 3) qui attire le prix</td></tr>
+<tr><td class="mono">Order Block (OB)</td><td>Dernière bougie contraire avant le displacement ; empreinte des ordres institutionnels</td></tr>
+<tr><td class="mono">Mitigated</td><td>Se dit d'une zone (OB/FVG) déjà retestée — elle a livré sa liquidité, on ne la trade plus</td></tr>
+<tr><td class="mono">Premium / Discount</td><td>Moitié haute (chère) / basse (bon marché) d'une jambe de prix, séparées par le 50 %</td></tr>
+<tr><td class="mono">OTE</td><td>Optimal Trade Entry — la fenêtre 0.62–0.79 du Fibonacci, entrée idéale</td></tr>
+<tr><td class="mono">Killzone</td><td>Fenêtre horaire à forte activité institutionnelle : Londres 9h–11h30, New York 14h30–17h (Paris)</td></tr>
+<tr><td class="mono">Judas swing</td><td>Faux départ à l'ouverture d'une session, qui sert de sweep avant le vrai mouvement</td></tr>
+<tr><td class="mono">R</td><td>Unité de risque : 1R = le montant risqué sur le trade ; tout se mesure en R</td></tr>
+<tr><td class="mono">RR</td><td>Ratio risque/récompense — minimum 1:2 dans la stratégie</td></tr>
+<tr><td class="mono">Winrate</td><td>Pourcentage de trades gagnants</td></tr>
+<tr><td class="mono">Espérance</td><td>Gain moyen par trade = (WR × gain moyen) − (taux de perte × 1R) ; doit être positive</td></tr>
+<tr><td class="mono">Drawdown</td><td>Baisse depuis le plus haut du compte ; limité par des règles strictes en prop firm</td></tr>
+<tr><td class="mono">MFE / MAE</td><td>Excursion maximale favorable / défavorable d'un trade — sert à optimiser TP et SL</td></tr>
+<tr><td class="mono">MGC</td><td>Micro Gold futures — 1 contrat = 10 onces d'or ; l'un des supports possibles</td></tr>
+<tr><td class="mono">Tick</td><td>Plus petite variation de prix d'un contrat</td></tr>
+<tr><td class="mono">Ordre limite</td><td>Ordre placé à un prix meilleur que l'actuel — notre mode d'entrée (le retest vient à nous)</td></tr>
+<tr><td class="mono">Spread / Slippage</td><td>Écart achat-vente / différence entre prix demandé et obtenu — les coûts cachés</td></tr>
+<tr><td class="mono">Prop firm</td><td>Société qui finance des traders après une évaluation, contre un partage des gains</td></tr>
+<tr><td class="mono">Payout</td><td>Retrait des gains d'un compte financé — le seul gain définitif</td></tr>
+<tr><td class="mono">MSS</td><td>Market Structure Shift — CHoCH exécuté avec displacement (FVG laissé) : le retournement « signé »</td></tr>
+<tr><td class="mono">Inducement (IDM)</td><td>Pool-appât créé juste avant la vraie zone, balayé pour piéger les entrées précoces</td></tr>
+<tr><td class="mono">Resting liquidity</td><td>Liquidité dormante : tous les ordres en attente accumulés autour d'un niveau évident</td></tr>
+<tr><td class="mono">Engineered liquidity</td><td>Liquidité fabriquée : niveaux « trop parfaits » construits pour attirer des stops</td></tr>
+<tr><td class="mono">Liquidity grab</td><td>Prise de liquidité au sens large, parfois en plusieurs bougies avant réintégration</td></tr>
+<tr><td class="mono">Breaker block</td><td>Order Block invalidé en clôture qui change de polarité — retesté dans l'autre sens</td></tr>
+<tr><td class="mono">iFVG</td><td>Inversion FVG — gap traversé en clôture qui devient zone du camp opposé</td></tr>
+<tr><td class="mono">BPR</td><td>Balanced Price Range — intersection de deux FVG opposés ; zone de précision maximale</td></tr>
+<tr><td class="mono">Compression / Expansion</td><td>Contraction de volatilité qui accumule la liquidité / displacement qui la dépense</td></tr>
+<tr><td class="mono">Silver Bullet</td><td>Fenêtre horaire ICT (16h–17h Paris) : premier FVG dans le sens confirmé de la session NY</td></tr>
+<tr><td class="mono">PWH / PWL</td><td>Previous Week High / Low — les aimants hebdomadaires de la cascade multi-timeframe</td></tr>
+<tr><td class="mono">Marubozu / Pin bar / Engulfing</td><td>Bougie pleine (momentum) / bougie de rejet (sweep condensé) / avalement (mini-CHoCH)</td></tr>
+<tr><td class="mono">Draw on Liquidity (DOL)</td><td>Le pool que le marché vise actuellement — l'aimant actif de la session</td></tr>
+<tr><td class="mono">External / Internal liquidity</td><td>Liquidité au-delà des extrêmes (stops) / à l'intérieur du range (FVG, OB, équilibre)</td></tr>
+<tr><td class="mono">Liquidity void</td><td>Jambe de prix traversée quasi sans transactions — retraversée aussi vite au retour</td></tr>
+<tr><td class="mono">Repricing / Rebalancing</td><td>Re-cotation violente vers une nouvelle valeur / retour combler un déséquilibre</td></tr>
+<tr><td class="mono">PD Array</td><td>Toute zone Premium/Discount exploitable (breaker, OB, FVG…) — voir la hiérarchie du Module 6</td></tr>
+<tr><td class="mono">Power of Three (PO3 / AMD)</td><td>Accumulation → Manipulation → Distribution : le cycle d'une journée ou d'une bougie</td></tr>
+<tr><td class="mono">2022 Model / Unicorn</td><td>Noms ICT du Setup GSS Classique / du chevauchement breaker + FVG</td></tr>
+<tr><td class="mono">Trend / Range / Neutral day</td><td>Les types de journées du Module 12 — chacun impose son adaptation</td></tr>
+<tr><td class="mono">Kelly / Fixed Fractional</td><td>Modèles de sizing : optimal théorique intenable / % fixe du capital (le modèle de la formation)</td></tr>
+<tr><td class="mono">Risk of Ruin</td><td>Probabilité de perte irrécupérable — ce que le sizing à 0,75 % rend quasi nulle</td></tr>
+<tr><td class="mono">Tilt</td><td>État de dérèglement émotionnel où les règles semblent optionnelles — se quitte, ne se pilote pas</td></tr>
+<tr><td class="mono">FOMC drift / Judas de news</td><td>Faux mouvement d'anticipation avant une annonce / premier spike mensonger d'une news</td></tr>
+</table></div>
+</dialog><footer class="frisk">Avertissement : le trading comporte un risque de perte en capital. Contenu strictement éducatif — aucun conseil en investissement.</footer>
+<script>window.GSS_LEARN_SLUGS=["01-le-trading-lor-et-toi","02-lire-un-graphique","03-bougies-japonaises","04-structure-de-marche","05-la-liquidite","06-zones-institutionnelles","07-multi-timeframe","08-indicateurs","09-setup-a-plus","10-bibliotheque-de-setups","11-gestion-du-risque","12-sessions-killzones","13-journal","14-backtesting","15-psychologie","16-objectifs","17-tradingview","18-correlations","19-saisonnalite","20-execution","21-order-flow","22-prop-firm","23-etude-de-cas","24-trader-durable"];</script>
+<script src="../assets/formation.js" defer></script>
+</body>
+</html>
