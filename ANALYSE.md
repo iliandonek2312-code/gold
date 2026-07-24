@@ -107,8 +107,31 @@ sans compte serveur. Acceptable pour un premier lancement.
 /scripts/verify.mjs              contrôleur
 ```
 
+## Correctifs constatés à l'ÉTAPE 1
+
+1. **Le mode liseuse existe, mais au runtime.** Le 2ᵉ `<script>` ajoute la classe
+   `.rsheet` aux sections **au chargement** (d'où 0 dans le HTML statique). Ce
+   moteur pagine **une section entière = un écran** : sa granularité est déjà
+   celle d'un module. L'option (b) retenue (une page = un module, ◀ ▶ entre
+   modules) **reproduit donc fidèlement** ce comportement, à travers des URL.
+
+2. **Les quiz sont par PARTIE, hors des sections.** 4 blocs `<div class="quiz">`
+   autonomes entre les modules + l'examen. Rattachement retenu :
+   - Partie I (6 q) → module 03 · Partie II (8 q) → module 07
+   - Partie III (9 q) → module 12 · Partie V (8 q) → module 24
+   - Examen (20 q) → page `examen.html`. Total = 51 ✓ (pas de quiz en Partie IV).
+
+3. **Outils interactifs spécifiques** repérés en plus du moteur de quiz, à
+   recâbler dans `formation.js` : checklist Setup A+ (`.ck` / `#score`, module 09)
+   et calculateur d'espérance (`#c-out`, module 11).
+
+## ÉTAPE 1 — Outils (fait)
+
+`scripts/extract.mjs` (découpeur + rapport `--dry`) et `scripts/verify.mjs`
+(contrôleur). Extraction à blanc conforme au contrat ; `verify --source` :
+**11/11 au vert**. Aucune page générée à ce stade.
+
 ## Prochaine étape
 
-**ÉTAPE 1 — Outils** : écrire `extract.mjs` et `verify.mjs`, lancer l'extraction
-à blanc et montrer ce qu'elle trouve, sans encore écrire les pages. En attente
-de validation.
+**ÉTAPE 2 — Un module parfait** : générer uniquement le Module 05 (`m2`,
+La liquidité), gabarit + `formation.css` + `formation.js`, et le montrer.
