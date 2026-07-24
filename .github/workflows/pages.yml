@@ -3,7 +3,6 @@ name: Deploy GitHub Pages
 on:
   push:
     branches:
-      - claude/gold-sweep-academy-redesign-oy1hya
       - main
   workflow_dispatch:
 
