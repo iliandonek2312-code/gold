@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /mentions-legales.html
+Disallow: /confidentialite.html
+Disallow: /cgv.html
+
+# Remplacez le domaine ci-dessous par votre domaine réel avant mise en production.
+Sitemap: https://www.goldsweepacademy.com/sitemap.xml
